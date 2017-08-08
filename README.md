@@ -1,1 +1,2 @@
-# APCS-peter2524-cmis
+this is my repository for AP computer science.
+
