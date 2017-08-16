@@ -103,4 +103,12 @@ public class Fundamentals1{
                 +"how many legs there are in the world");
         System.out.print("The long variable is "+booleanvariable+" "+booleandescription+nln+examples);
     }
+    
+    public static int add(int a, int b){
+        int intone = 3;
+        int inttwo = 5;
+        int sum = intone + inttwo;
+        System.out.print("The sum of these two numbers("+intone+"and"+inttwo+"is"+sum);
+    } return sum
+
 }
