@@ -105,10 +105,42 @@ public class Fundamentals1{
     }
     
     public static int add(int a, int b){
-        int intone = 3;
-        int inttwo = 5;
-        int sum = intone + inttwo;
-        System.out.print("The sum of these two numbers("+intone+"and"+inttwo+"is"+sum);
-    } return sum
-
+        int isum = a + b;
+        return isum;
+    }
+    
+    public static int sub(int a, int b){
+        int idif = a - b;
+        return idif;
+    }
+    
+    public static int mul(int a, int b){
+        int iprod = a * b;
+        return iprod;
+    }
+    
+    public static int div(int a, int b){        
+        int iquo = a / b;
+        return iquo;
+    }
+    
+    public static double add(double a, double b){
+        double dsum = a + b;
+        return dsum;
+    }
+    
+    public static double sub(double a, double b){
+        double ddif = a - b;
+        return ddif;
+    }
+    
+    public static double mul(double a, double b){
+        double dprod = a * b;
+        return dprod;
+    }
+    
+    public static double div(double a, double b){        
+        double dquo = a / b;
+        return dquo;
+    }
 }
