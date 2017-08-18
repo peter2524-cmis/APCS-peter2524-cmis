@@ -5,6 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.util.Scanner;
 public class Fundamentals1{
     public static void intstuff(){
         int theintvariable = 73456758;
@@ -104,45 +105,69 @@ public class Fundamentals1{
         System.out.print("The long variable is "+booleanvariable+" "+booleandescription+nln+examples);
     }
     
-    public static int add(int a, int b){
+    public static int iadd(int a, int b){
         int isum = a + b;
         return isum;
     }
     
-    public static int sub(int a, int b){
+    public static int isub(int a, int b){
         int idif = a - b;
         return idif;
     }
     
-    public static int mul(int a, int b){
+    public static int imul(int a, int b){
         int iprod = a * b;
         return iprod;
     }
     
-    public static int div(int a, int b){        
+    public static int idiv(int a, int b){        
         int iquo = a / b;
         return iquo;
     }
     
-    public static double add(double a, double b){
+    public static double dadd(double a, double b){
         double dsum = a + b;
         return dsum;
     }
     
-    public static double sub(double a, double b){
+    public static double dsub(double a, double b){
         double ddif = a - b;
         return ddif;
     }
     
-    public static double mul(double a, double b){
+    public static double dmul(double a, double b){
         double dprod = a * b;
         return dprod;
     }
     
-    public static double div(double a, double b){        
+    public static double ddiv(double a, double b){        
         double dquo = a / b;
         return dquo;
     }
     
-    public static main(
+    public static void main(){
+        int reisum = iadd (5,7);
+        int reiprod = imul (5,7);
+        System.out.print("the results for the multiplication and addition of the ints are "+reiprod+" and "+reisum);
+        double redsum = dadd(4,9);
+        double redprod = dmul(4,9);
+        Scanner reader = new Scanner(System.in);
+        System.out.println("Enter an int you would like to have subtracted from and divided ");
+        int ibasesubdiv = reader.nextInt();
+        System.out.println("enter the other half of this problem");
+        int iotherhalf = reader.nextInt();
+        System.out.println("You entered the numbers " +ibasesubdiv+" and "+iotherhalf);
+        int reidif = isub(ibasesubdiv,iotherhalf);
+        int reiquo = idiv(ibasesubdiv,iotherhalf);
+        System.out.print("the results for the subtraction and division of the ints are "+reidif+" and "+reiquo);
+        System.out.println("Enter an double you would like to have subtracted from and divided ");
+        int dbasesubdiv = reader.nextInt();
+        System.out.println("enter the other half of this problem");
+        int dotherhalf = reader.nextInt();
+        System.out.println("You entered the numbers " +dbasesubdiv+" and "+dotherhalf);
+        double reddif = dsub(dbasesubdiv,dotherhalf);
+        double redquo = ddiv(dbasesubdiv,dotherhalf);
+        System.out.print("the results for the subtraction and division of the doubles are "+reidif+" and "+reiquo);
+    }
+    
 }
