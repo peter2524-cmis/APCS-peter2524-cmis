@@ -145,6 +145,40 @@ public class Fundamentals1{
         return dquo;
     }
     
+    
+    public static void compare(int a, int b){
+        if (a>b)
+        {System.out.print("The value of a is "+ a + " and it is greater than b whose value is "+ b);
+        }
+        if (a<b)
+        {System.out.print("The value of a is "+ a + " and it is less than b whose value is "+ b);
+        }
+        if (a==b)
+        {System.out.print("The value of a is "+ a + " and it is twice as equal as b whose value is "+ b);
+        }
+    }
+    
+    public static int evenOddZero(int a){
+        int g = 0;
+        if (a==0)
+        {g = 0;
+        }
+        if ((a%2)==0)
+        {g = 1;
+        }
+        if ((a%2)==1)
+        {g = -1;
+        }
+        return g;
+    }
+    
+    public static void squareTable(){
+        for(int stater=1; starter<11; starter++){
+            stater
+              System.out.println("the starter was: "+stater+"The square was);
+         }
+    }
+    
     public static void main(){
         int reisum = iadd (5,7);
         int reiprod = imul (5,7);
@@ -168,6 +202,11 @@ public class Fundamentals1{
         double reddif = dsub(dbasesubdiv,dotherhalf);
         double redquo = ddiv(dbasesubdiv,dotherhalf);
         System.out.print("the results for the subtraction and division of the doubles are "+reidif+" and "+reiquo);
+        
+        compare(4, 54);
+        int eoz=0; 
+        eoz= evenOddZero(67);
+        System.out.print("0 represents the number was 0, 1 represents the number was even -1 represents the number was odd the number is "+eoz);
     }
-    
+
 }
