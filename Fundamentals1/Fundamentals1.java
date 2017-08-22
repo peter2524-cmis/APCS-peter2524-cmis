@@ -172,10 +172,17 @@ public class Fundamentals1{
         return g;
     }
     
-    public static void squareTable(){
-        for(int stater=1; starter<11; starter++){
-            stater
-              System.out.println("the starter was: "+stater+"The square was);
+    public static void squareTable(int starter){
+        for(starter = 1; starter<11; starter++){
+            int square = starter * starter;
+            int random = (int)(Math.random()*(square-starter))+starter;
+            System.out.println("the starter was: "+starter+"The square was :"+square+" and the random was"+random);
+         }
+    }
+    
+    public static void triangle(int triangle){
+        for(triangle = 9; triangle=0; triangle--){
+            
          }
     }
     
