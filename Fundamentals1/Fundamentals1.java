@@ -181,8 +181,18 @@ public class Fundamentals1{
     }
     
     public static void triangle(int triangle){
-        for(triangle = 9; triangle=0; triangle--){
-            
+        int answer = 0;
+        for(triangle = 9; triangle>0; triangle--){
+            answer = triangle + answer;
+            System.out.println("Current answer is "+answer);
+         }
+    }
+    
+    public static void pyramid(int triangle){
+        int answer = 0;
+        for(triangle = 9; triangle>0; triangle--){
+            answer = (triangle*triangle)+answer;
+            System.out.println("Current answer is "+answer);
          }
     }
     
