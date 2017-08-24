@@ -177,7 +177,7 @@ public class Fundamentals1{
             int square = starter * starter;
             int random = (int)(Math.random()*(square-starter))+starter;
             System.out.println("the starter was: "+starter+"The square was :"+square+" and the random was"+random);
-         }
+        }
     }
     
     public static void triangle(int triangle){
@@ -185,7 +185,8 @@ public class Fundamentals1{
         for(triangle = 9; triangle>0; triangle--){
             answer = triangle + answer;
             System.out.println("Current answer is "+answer);
-         }
+        }
+         System.out.println("the final answer is "+answer);
     }
     
     public static void pyramid(int triangle){
@@ -193,11 +194,32 @@ public class Fundamentals1{
         for(triangle = 9; triangle>0; triangle--){
             answer = (triangle*triangle)+answer;
             System.out.println("Current answer is "+answer);
-         }
+        }
+        System.out.println("the final answer is "+answer); 
     }
     
+    public static void checkerboard(int rows, int cols){
+          System.out.println("Rows: "+rows+" and Columns: "+cols);
+          int rafind1 = (int)(Math.random()*(rows))+1;
+          int rafind2 = (int)(Math.random()*(cols))+1;
+          int randomint = (int)(Math.random()*(cols))+rows;
+        for(int i=1;i<=rows;i++){
+            for(int j=1;j<=cols;j++)
+                if((i%2==1 && j%2==1) || (i%2==0 && j%2==0)){
+                   if ((i%2==rafind1&& j%2==rafind2)){
+                       System.out.print(randomint);
+                    }
+                   System.out.print("#");
+                }
+                else{
+                    System.out.print(" ");
+                }
+            System.out.println();
+        }
+   }
+         
     public static void main(){
-        int reisum = iadd (5,7);
+        *\int reisum = iadd (5,7);
         int reiprod = imul (5,7);
         System.out.print("the results for the multiplication and addition of the ints are "+reiprod+" and "+reisum);
         double redsum = dadd(4,9);
@@ -223,7 +245,9 @@ public class Fundamentals1{
         compare(4, 54);
         int eoz=0; 
         eoz= evenOddZero(67);
-        System.out.print("0 represents the number was 0, 1 represents the number was even -1 represents the number was odd the number is "+eoz);
+        Sysem.out.print("0 represents the number was 0, 1 represents the number was even -1 represents the number was odd the number is "+eoz);
     }
 
 }
+        
+
