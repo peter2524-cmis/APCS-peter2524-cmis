@@ -93,7 +93,7 @@ public class Fundamentals1{
                 +"how many legs there are in the world");
         System.out.print("The long variable is "+Doublevariable+" "+Doubledescription+nln+examples);
     }
-    
+
     public static void Booleanstuff(){
         boolean booleanvariable = false;
         String nln=("\n");
@@ -104,48 +104,47 @@ public class Fundamentals1{
                 +"how many legs there are in the world");
         System.out.print("The long variable is "+booleanvariable+" "+booleandescription+nln+examples);
     }
-    
-    public static int iadd(int a, int b){
+
+    public static int add(int a, int b){
         int isum = a + b;
         return isum;
     }
-    
-    public static int isub(int a, int b){
+
+    public static int sub(int a, int b){
         int idif = a - b;
         return idif;
     }
-    
-    public static int imul(int a, int b){
+
+    public static int mul(int a, int b){
         int iprod = a * b;
         return iprod;
     }
-    
-    public static int idiv(int a, int b){        
+
+    public static int div(int a, int b){        
         int iquo = a / b;
         return iquo;
     }
-    
-    public static double dadd(double a, double b){
+
+    public static double add(double a, double b){
         double dsum = a + b;
         return dsum;
     }
-    
-    public static double dsub(double a, double b){
+
+    public static double sub(double a, double b){
         double ddif = a - b;
         return ddif;
     }
-    
-    public static double dmul(double a, double b){
+
+    public static double mul(double a, double b){
         double dprod = a * b;
         return dprod;
     }
-    
-    public static double ddiv(double a, double b){        
+
+    public static double div(double a, double b){        
         double dquo = a / b;
         return dquo;
     }
-    
-    
+
     public static void compare(int a, int b){
         if (a>b)
         {System.out.print("The value of a is "+ a + " and it is greater than b whose value is "+ b);
@@ -157,7 +156,7 @@ public class Fundamentals1{
         {System.out.print("The value of a is "+ a + " and it is twice as equal as b whose value is "+ b);
         }
     }
-    
+
     public static int evenOddZero(int a){
         int g = 0;
         if (a==0)
@@ -171,7 +170,7 @@ public class Fundamentals1{
         }
         return g;
     }
-    
+
     public static void squareTable(int starter){
         for(starter = 1; starter<11; starter++){
             int square = starter * starter;
@@ -179,16 +178,16 @@ public class Fundamentals1{
             System.out.println("the starter was: "+starter+"The square was :"+square+" and the random was"+random);
         }
     }
-    
+
     public static void triangle(int triangle){
         int answer = 0;
         for(triangle = 9; triangle>0; triangle--){
             answer = triangle + answer;
             System.out.println("Current answer is "+answer);
         }
-         System.out.println("the final answer is "+answer);
+        System.out.println("the final answer is "+answer);
     }
-    
+
     public static void pyramid(int triangle){
         int answer = 0;
         for(triangle = 9; triangle>0; triangle--){
@@ -197,57 +196,84 @@ public class Fundamentals1{
         }
         System.out.println("the final answer is "+answer); 
     }
-    
+
     public static void checkerboard(int rows, int cols){
-          System.out.println("Rows: "+rows+" and Columns: "+cols);
-          int rafind1 = (int)(Math.random()*(rows))+1;
-          int rafind2 = (int)(Math.random()*(cols))+1;
-          int randomint = (int)(Math.random()*(cols))+rows;
+        System.out.println("Rows: "+rows+" and Columns: "+cols);
+        /**String toplength= "_"+("_"*(cols-1));
+        String bordertop = "+"+toplength*cols+"+";
+         */
+        int divider=2;
+        int rafind1 = (int) (Math.random()*(rows))+0;
+        int the_chooser1=rafind1%2;
+        if ((the_chooser1) == 0 ){
+            rafind1=rafind1 + 1;
+            if (rafind1>rows){
+                rafind1 = rafind1 - 2;
+            }
+        }
+        int rafind2 = (int)(Math.random()*(cols))+0;
+        int the_chooser2=rafind2%2;
+        if (the_chooser2 == 0){
+            rafind2=rafind2 + 1;
+            if (rafind2>rows){
+                rafind2 = rafind2 - 2;
+            }
+        }
+        int randomint = (int)(Math.random()*(cols))+rows;
         for(int i=1;i<=rows;i++){
-            for(int j=1;j<=cols;j++)
-                if((i%2==1 && j%2==1) || (i%2==0 && j%2==0)){
-                   if ((i%2==rafind1&& j%2==rafind2)){
-                       System.out.print(randomint);
+            for(int j=1;j<=cols;j++)  
+
+                if((j%2==1 && i%2==1) || (j%2==0 && i%2==0)){
+                    if ((j%2==rafind1&& i%2==rafind2)){
+                        System.out.print(randomint);
                     }
-                   System.out.print("#");
+                    else{
+
+                        if (j==1){
+                            System.out.print("|");
+                        }
+                        System.out.print("#");
+                    }
                 }
                 else{
+
+                    if (j==1){
+                        System.out.print("|");
+                    }
                     System.out.print(" ");
                 }
-            System.out.println();
+           System.out.println("|");
         }
-   }
-         
+    }
+
     public static void main(){
-        *\int reisum = iadd (5,7);
-        int reiprod = imul (5,7);
+        int reisum = add (5,7);
+        int reiprod = mul (5,7);
         System.out.print("the results for the multiplication and addition of the ints are "+reiprod+" and "+reisum);
-        double redsum = dadd(4,9);
-        double redprod = dmul(4,9);
+        double redsum = add(4,9);
+        double redprod = mul(4,9);
         Scanner reader = new Scanner(System.in);
         System.out.println("Enter an int you would like to have subtracted from and divided ");
         int ibasesubdiv = reader.nextInt();
         System.out.println("enter the other half of this problem");
         int iotherhalf = reader.nextInt();
         System.out.println("You entered the numbers " +ibasesubdiv+" and "+iotherhalf);
-        int reidif = isub(ibasesubdiv,iotherhalf);
-        int reiquo = idiv(ibasesubdiv,iotherhalf);
+        int reidif = sub(ibasesubdiv,iotherhalf);
+        int reiquo = div(ibasesubdiv,iotherhalf);
         System.out.print("the results for the subtraction and division of the ints are "+reidif+" and "+reiquo);
         System.out.println("Enter an double you would like to have subtracted from and divided ");
         int dbasesubdiv = reader.nextInt();
         System.out.println("enter the other half of this problem");
         int dotherhalf = reader.nextInt();
         System.out.println("You entered the numbers " +dbasesubdiv+" and "+dotherhalf);
-        double reddif = dsub(dbasesubdiv,dotherhalf);
-        double redquo = ddiv(dbasesubdiv,dotherhalf);
+        double reddif = sub(dbasesubdiv,dotherhalf);
+        double redquo = div(dbasesubdiv,dotherhalf);
         System.out.print("the results for the subtraction and division of the doubles are "+reidif+" and "+reiquo);
-        
+
         compare(4, 54);
         int eoz=0; 
         eoz= evenOddZero(67);
-        Sysem.out.print("0 represents the number was 0, 1 represents the number was even -1 represents the number was odd the number is "+eoz);
+        System.out.print("0 represents the number was 0, 1 represents the number was even -1 represents the number was odd the number is "+eoz);
     }
 
 }
-        
-
