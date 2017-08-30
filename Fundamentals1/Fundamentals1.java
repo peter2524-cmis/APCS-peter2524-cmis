@@ -199,11 +199,8 @@ public class Fundamentals1{
 
     public static void checkerboard(int rows, int cols){
         System.out.println("Rows: "+rows+" and Columns: "+cols);
-        /**String toplength= "_"+("_"*(cols-1));
-        String bordertop = "+"+toplength*cols+"+";
-         */
         int divider=2;
-        int rafind1 = (int) (Math.random()*(rows))+0;
+        int rafind1 = (int) (Math.random()*(9))+0;
         int the_chooser1=rafind1%2;
         if ((the_chooser1) == 0 ){
             rafind1=rafind1 + 1;
@@ -211,7 +208,7 @@ public class Fundamentals1{
                 rafind1 = rafind1 - 2;
             }
         }
-        int rafind2 = (int)(Math.random()*(cols))+0;
+        int rafind2 = (int)(Math.random()*(9))+0;
         int the_chooser2=rafind2%2;
         if (the_chooser2 == 0){
             rafind2=rafind2 + 1;
@@ -224,7 +221,7 @@ public class Fundamentals1{
             for(int j=1;j<=cols;j++)  
 
                 if((j%2==1 && i%2==1) || (j%2==0 && i%2==0)){
-                    if ((j%2==rafind1&& i%2==rafind2)){
+                    if ((j==rafind1) && (i==rafind2)){
                         System.out.print(randomint);
                     }
                     else{
