@@ -199,29 +199,25 @@ public class Fundamentals1{
 
     public static void checkerboard(int rows, int cols){
         System.out.println("Rows: "+rows+" and Columns: "+cols);
-        int divider=2;
-        int rafind1 = (int) (Math.random()*(9))+0;
-        int the_chooser1=rafind1%2;
-        if ((the_chooser1) == 0 ){
-            rafind1=rafind1 + 1;
-            if (rafind1>rows){
-                rafind1 = rafind1 - 2;
+        rows = rows +1;
+        int rowfind = (int)(Math.random()*(rows))+1;
+        int colfind = (int)(Math.random()*(cols))+1;{
+            if (rowfind%2==0){
+                colfind=colfind+1;
+            }
+            else if ((rowfind%2==0)&&(colfind==cols)){
+                colfind=colfind-1;
+            }
+            else if (colfind==0){
+                colfind=colfind+2;
             }
         }
-        int rafind2 = (int)(Math.random()*(9))+0;
-        int the_chooser2=rafind2%2;
-        if (the_chooser2 == 0){
-            rafind2=rafind2 + 1;
-            if (rafind2>rows){
-                rafind2 = rafind2 - 2;
-            }
-        }
-        int randomint = (int)(Math.random()*(cols))+rows;
+        int randomint = (int)(Math.random()*(9))+0;
         for(int i=1;i<=rows;i++){
             for(int j=1;j<=cols;j++)  
 
                 if((j%2==1 && i%2==1) || (j%2==0 && i%2==0)){
-                    if ((j==rafind1) && (i==rafind2)){
+                    if ((j==rowfind) && (i==colfind)){
                         System.out.print(randomint);
                     }
                     else{
@@ -232,6 +228,13 @@ public class Fundamentals1{
                         System.out.print("#");
                     }
                 }
+                else if (i==1){
+                    if (i==1){
+                        System.out.print(" ");
+                        
+                    }
+                    
+                }
                 else{
 
                     if (j==1){
@@ -239,7 +242,7 @@ public class Fundamentals1{
                     }
                     System.out.print(" ");
                 }
-           System.out.println("|");
+            System.out.println("|");
         }
     }
 
