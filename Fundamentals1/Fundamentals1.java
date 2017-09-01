@@ -213,6 +213,22 @@ public class Fundamentals1{
             }
         }
         int randomint = (int)(Math.random()*(9))+0;
+        for(int topi=1;topi<=rows;topi++){
+            for(int j=1;j<=1;j++){
+                if (j==1){
+
+                    System.out.print("+");
+
+                }
+                System.out.print("_");
+
+                if (topi==cols+1){
+                    System.out.print("\n");
+
+                }
+            }
+        }
+
         for(int i=1;i<=rows;i++){
             for(int j=1;j<=cols;j++)  
 
@@ -231,9 +247,9 @@ public class Fundamentals1{
                 else if (i==1){
                     if (i==1){
                         System.out.print(" ");
-                        
+
                     }
-                    
+
                 }
                 else{
 
@@ -273,7 +289,7 @@ public class Fundamentals1{
         compare(4, 54);
         int eoz=0; 
         eoz= evenOddZero(67);
-        System.out.print("0 represents the number was 0, 1 represents the number was even -1 represents the number was odd the number is "+eoz);
+        System.out.print("0 represents the number was 0, 1 represents the number was even -1 represents the number was odd the number is "+eoz); 
     }
 
 }
