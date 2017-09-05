@@ -199,7 +199,7 @@ public class Fundamentals1{
 
     public static void checkerboard(int rows, int cols){
         System.out.println("Rows: "+rows+" and Columns: "+cols);
-        rows = rows +1;
+
         int rowfind = (int)(Math.random()*(rows))+1;
         int colfind = (int)(Math.random()*(cols))+1;{
             if (rowfind%2==0){
@@ -213,27 +213,26 @@ public class Fundamentals1{
             }
         }
         int randomint = (int)(Math.random()*(9))+0;
-        for(int topi=1;topi<=rows;topi++){
-            for(int j=1;j<=1;j++){
+        for(int numor=(rows);numor<=rows;numor++){
+            for(int j=1;j<=cols;j++){  
                 if (j==1){
-
                     System.out.print("+");
-
-                }
-                System.out.print("_");
-
-                if (topi==cols+1){
-                    System.out.print("\n");
-
-                }
+                }           
+                System.out.print("-");
+                if (j>cols){
+                    break;
+                    }
             }
+            System.out.println("+");
         }
+        for(int numor=1;numor<=rows;numor++){
+            if (rows==0){
+                System.out.print("\n");
+            }
+            for(int j=1;j<=cols;j++){ 
 
-        for(int i=1;i<=rows;i++){
-            for(int j=1;j<=cols;j++)  
-
-                if((j%2==1 && i%2==1) || (j%2==0 && i%2==0)){
-                    if ((j==rowfind) && (i==colfind)){
+                if((j%2==1 && i%2==1) || (j%2==0 && numor%2==0)){
+                    if ((j==rowfind) && (numor==colfind)){
                         System.out.print(randomint);
                     }
                     else{
@@ -258,7 +257,20 @@ public class Fundamentals1{
                     }
                     System.out.print(" ");
                 }
+            }
             System.out.println("|");
+        }
+        for(int i=(rows);i<=rows;i++){
+            for(int j=1;j<=cols;j++){  
+                if (j==1){
+                    System.out.print("+");
+                }           
+                System.out.print("-");
+                if (j>cols){
+                    break;
+                    }
+            }
+            System.out.println("+");
         }
     }
 
