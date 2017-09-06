@@ -197,9 +197,10 @@ public class Fundamentals1{
         System.out.println("the final answer is "+answer); 
     }
 
-    public static void checkerboard(int rows, int cols){
-        System.out.println("Rows: "+rows+" and Columns: "+cols);
-
+    public static String checkerboard(int rows, int cols){
+        String board = "";
+        board += "Rows: "+rows+" and Columns: "+cols;
+        board += "\n";
         int rowfind = (int)(Math.random()*(rows))+1;
         int colfind = (int)(Math.random()*(cols))+1;{
             if (rowfind%2==0){
@@ -214,94 +215,103 @@ public class Fundamentals1{
         }
         int randomint = (int)(Math.random()*(9))+0;
         for(int numor=(rows);numor<=rows;numor++){
-            for(int j=1;j<=cols;j++){  
-                if (j==1){
-                    System.out.print("+");
+            for(int numoc=1;numoc<=cols;numoc++){  
+                if (numoc==1){
+                    board += "+";
                 }           
-                System.out.print("-");
-                if (j>cols){
+                board += "-";
+                if (numoc>cols){
                     break;
-                    }
+                }
             }
-            System.out.println("+");
+            board += "+";
+            board += "\n";
         }
         for(int numor=1;numor<=rows;numor++){
             if (rows==0){
-                System.out.print("\n");
+                board += "\n";
             }
-            for(int j=1;j<=cols;j++){ 
+            for(int numoc=1;numoc<=cols;numoc++){ 
 
-                if((j%2==1 && i%2==1) || (j%2==0 && numor%2==0)){
-                    if ((j==rowfind) && (numor==colfind)){
-                        System.out.print(randomint);
+                if((numoc%2==1 && numor%2==1) || (numoc%2==0 && numor%2==0)){
+                    if ((numoc==rowfind) && (numor==colfind)){
+                        board += (randomint);
                     }
                     else{
 
-                        if (j==1){
-                            System.out.print("|");
+                        if (numoc==1){
+                            board += "|";
                         }
-                        System.out.print("#");
+                        board += "#";
                     }
                 }
-                else if (i==1){
-                    if (i==1){
-                        System.out.print(" ");
+                else if (numor==1){
+                    if (numor==1){
+                        board += " ";
 
                     }
 
                 }
                 else{
 
-                    if (j==1){
-                        System.out.print("|");
+                    if (numoc==1){
+                        board += "|";
                     }
-                    System.out.print(" ");
+                    board += " ";
                 }
             }
-            System.out.println("|");
+            board += "|";
+            board += "\n";
         }
-        for(int i=(rows);i<=rows;i++){
-            for(int j=1;j<=cols;j++){  
-                if (j==1){
-                    System.out.print("+");
+        for(int numor=(rows);numor<=rows;numor++){
+            for(int numoc=1;numoc<=cols;numoc++){  
+                if (numoc==1){
+                    board += "+";
                 }           
-                System.out.print("-");
-                if (j>cols){
+                board += "-";
+                if (numoc>cols){
                     break;
-                    }
+                }
             }
-            System.out.println("+");
+            board += "+";
         }
+        return board;
     }
 
     public static void main(){
         int reisum = add (5,7);
         int reiprod = mul (5,7);
-        System.out.print("the results for the multiplication and addition of the ints are "+reiprod+" and "+reisum);
+        System.out.print("the results for the multiplication and addition of the ints are "+reiprod+" and "+reisum+"\n");
         double redsum = add(4,9);
         double redprod = mul(4,9);
         Scanner reader = new Scanner(System.in);
-        System.out.println("Enter an int you would like to have subtracted from and divided ");
+        System.out.println("Enter an int you would like to have subtracted from and divided "+"\n");
         int ibasesubdiv = reader.nextInt();
-        System.out.println("enter the other half of this problem");
+        System.out.println("enter the other half of this problem"+"\n");
         int iotherhalf = reader.nextInt();
-        System.out.println("You entered the numbers " +ibasesubdiv+" and "+iotherhalf);
+        System.out.println("You entered the numbers " +ibasesubdiv+" and "+iotherhalf+"\n");
         int reidif = sub(ibasesubdiv,iotherhalf);
         int reiquo = div(ibasesubdiv,iotherhalf);
-        System.out.print("the results for the subtraction and division of the ints are "+reidif+" and "+reiquo);
-        System.out.println("Enter an double you would like to have subtracted from and divided ");
-        int dbasesubdiv = reader.nextInt();
-        System.out.println("enter the other half of this problem");
+        System.out.print("the results for the subtraction and division of the ints are "+reidif+" and "+reiquo+"\n");
+        System.out.println("Enter an double you would like to have subtracted from and divided "+"\n");
+        double dbasesubdiv = reader.nextDouble();
+        System.out.println("enter the other half of this problem"+"\n");
         int dotherhalf = reader.nextInt();
-        System.out.println("You entered the numbers " +dbasesubdiv+" and "+dotherhalf);
+        System.out.println("You entered the numbers " +dbasesubdiv+" and "+dotherhalf+"\n");
         double reddif = sub(dbasesubdiv,dotherhalf);
         double redquo = div(dbasesubdiv,dotherhalf);
-        System.out.print("the results for the subtraction and division of the doubles are "+reidif+" and "+reiquo);
+        System.out.print("the results for the subtraction and division of the doubles are "+reidif+" and "+reiquo+"\n");
 
         compare(4, 54);
         int eoz=0; 
         eoz= evenOddZero(67);
-        System.out.print("0 represents the number was 0, 1 represents the number was even -1 represents the number was odd the number is "+eoz); 
+        System.out.print("0 represents the number was 0, 1 represents the number was even -1 represents the number was odd the number is "+eoz+"\n");
+
+        System.out.println("enter the height of the checker board"+"\n");
+        int height = reader.nextInt();
+        System.out.println("enter the width of the checker board"+"\n");
+        int width = reader.nextInt();
+        checkerboard(height,width);
     }
 
 }
