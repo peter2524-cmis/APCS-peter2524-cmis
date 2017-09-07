@@ -296,7 +296,7 @@ public class Fundamentals1{
         System.out.println("Enter an double you would like to have subtracted from and divided "+"\n");
         double dbasesubdiv = reader.nextDouble();
         System.out.println("enter the other half of this problem"+"\n");
-        int dotherhalf = reader.nextInt();
+        double dotherhalf = reader.nextDouble();
         System.out.println("You entered the numbers " +dbasesubdiv+" and "+dotherhalf+"\n");
         double reddif = sub(dbasesubdiv,dotherhalf);
         double redquo = div(dbasesubdiv,dotherhalf);
@@ -311,7 +311,8 @@ public class Fundamentals1{
         int height = reader.nextInt();
         System.out.println("enter the width of the checker board"+"\n");
         int width = reader.nextInt();
-        checkerboard(height,width);
+        String cheque = checkerboard(height,width);
+        System.out.println(cheque+"\n");
     }
 
 }
