@@ -1,0 +1,249 @@
+import java.util.Arrays;
+public class CreatingAndLooping
+{
+
+    static int[] IntTestArray =new int[] {1,2,3,4,6,7,8,9,12,231,4,457,456};
+    public static void main(String[] args){
+        int[] intArray =new int[] {4689, 2756465, 8723657, 834765, 2};
+        double[] dubArray =new double[] {46.89, 5887.9, 32.6, 69.69, 45.3};
+        String[] strArray = new String[] {"Gut","gfkjfg", "fjdgh", "hgbf" ,"p"};
+        System.out.println("int one is:"+intArray[0]);
+        System.out.println("double three is:"+dubArray[2]);
+        System.out.println("string five is:"+strArray[4]);
+    }
+
+    public static void printArray(int array[], boolean skip){
+
+        int termit = array.length;
+        int x=0;
+        while(x!=termit){
+            if (skip==false ){
+
+                System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]); 
+            }
+            else if (skip== true){
+                if (x%2==0){
+                    System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]);
+                }
+                else if(x%2!=0){
+                    System.out.println("\n");
+                }
+            }
+            x++;
+        }
+
+    }
+
+    public static void printArray(char array[], boolean skip){
+
+        int termit = array.length;
+        int x=0;
+        while(x!=termit){
+            if (skip==false ){
+
+                System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]); 
+            }
+            else if (skip== true){
+                if (x%2==0){
+                    System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]);
+                }
+                else if(x%2!=0){
+                    System.out.println("\n");
+                }
+            }
+            x++;
+        }
+
+    }
+
+    public static void printArray(boolean array[], boolean skip){
+
+        int termit = array.length;
+        int x=0;
+        while(x!=termit){
+            if (skip==false ){
+
+                System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]); 
+            }
+            else if (skip== true){
+                if (x%2==0){
+                    System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]);
+                }
+                else if(x%2!=0){
+                    System.out.println("\n");
+                }
+            }
+            x++;
+        }
+
+    }
+
+    public static void printArray(long array[], boolean skip){
+
+        int termit = array.length;
+        int x=0;
+        while(x!=termit){
+            if (skip==false ){
+
+                System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]); 
+            }
+            else if (skip== true){
+                if (x%2==0){
+                    System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]);
+                }
+                else if(x%2!=0){
+                    System.out.println("\n");
+                }
+            }
+            x++;
+        }
+
+    }
+
+    public static void printArray(short array[], boolean skip){
+
+        int termit = array.length;
+        int x=0;
+        while(x!=termit){
+            if (skip==false ){
+
+                System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]); 
+            }
+            else if (skip== true){
+                if (x%2==0){
+                    System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]);
+                }
+                else if(x%2!=0){
+                    System.out.println("\n");
+                }
+            }
+            x++;
+        }
+
+    }
+
+    public static void printArray(float array[], boolean skip){
+
+        int termit = array.length;
+        int x=0;
+        while(x!=termit){
+            if (skip==false ){
+
+                System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]); 
+            }
+            else if (skip== true){
+                if (x%2==0){
+                    System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]);
+                }
+                else if(x%2!=0){
+                    System.out.println("\n");
+                }
+            }
+            x++;
+        }
+
+    }
+
+    public static void printArray(byte array[], boolean skip){
+
+        int termit = array.length;
+        int x=0;
+        while(x!=termit){
+            if (skip==false ){
+
+                System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]); 
+            }
+            else if (skip== true){
+                if (x%2==0){
+                    System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]);
+                }
+                else if(x%2!=0){
+                    System.out.println("\n");
+                }
+            }
+            x++;
+        }
+
+    }
+
+    public static void printArray(double array[], boolean skip){
+
+        int termit = array.length;
+        int x=0;
+        while(x!=termit){
+            if (skip==false ){
+
+                System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]); 
+            }
+            else if (skip== true){
+                if (x%2==0){
+                    System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]);
+                }
+                else if(x%2!=0){
+                    System.out.println("\n");
+                }
+            }
+            x++;
+        }
+
+    }
+
+    public static void printArray(String array[], boolean skip){
+
+        int termit = array.length;
+        int x=0;
+        while(x!=termit){
+            if (skip==false ){
+
+                System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]); 
+            }
+            else if (skip== true){
+                if (x%2==0){
+                    System.out.println("the "+x+"st Value of "+Arrays.toString(array)+" is "+array[x]);
+                }
+                else if(x%2!=0){
+                    System.out.println("\n");
+                }
+            }
+            x++;
+        }
+
+    }
+
+    public static int lastItem(int array[]){
+        int last = array.length - 1;
+        return (array[last]);
+    }
+
+    public static boolean lastItem(boolean array[]){
+        int last = array.length - 1;
+        return (array[last]);
+    }
+
+    public static char lastItem(char array[]){
+        int last = array.length - 1;
+        return (array[last]);
+    }
+
+    public static short lastItem(short array[]){
+        int last = array.length - 1;
+        return (array[last]);
+    }
+
+    public static long lastItem(long array[]){
+        int last = array.length - 1;
+        return (array[last]);
+    }
+
+    public static double lastItem(double array[]){
+        int last = array.length - 1;
+        return (array[last]);
+    }
+
+    public static boolean middleItem(boolean array[]){
+        byte oddEven = array.lenght%2
+        int midp1 = array.length
+        if 
+    }
+
+}
