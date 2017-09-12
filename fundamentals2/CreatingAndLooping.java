@@ -241,9 +241,68 @@ public class CreatingAndLooping
     }
 
     public static boolean middleItem(boolean array[]){
-        byte oddEven = array.lenght%2
-        int midp1 = array.length
-        if 
-    }
+        int oddEven = array.length%2;
+        int midp1 = array.length;
+        int midp2 = oddEven;
+        if (oddEven == 1){
+            midp2+=1;
+        }
+        return array[midp2];
+    } 
+        public static short middleItem(short array[]){
+        int oddEven = array.length%2;
+        int midp1 = array.length;
+        int midp2 = oddEven;
+        if (oddEven == 1){
+            midp2+=1;
+        }
+        return array[midp2];
+    } 
+        public static byte middleItem(byte array[]){
+        int oddEven = array.length%2;
+        int midp1 = array.length;
+        int midp2 = oddEven;
+        if (oddEven == 1){
+            midp2+=1;
+        }
+        return array[midp2];
+    } 
+        public static int middleItem(int array[]){
+        int oddEven = array.length%2;
+        int midp1 = array.length;
+        int midp2 = oddEven;
+        if (oddEven == 1){
+            midp2+=1;
+        }
+        return array[midp2];
+    } 
+        public static char middleItem(char array[]){
+        int oddEven = array.length%2;
+        int midp1 = array.length;
+        int midp2 = oddEven;
+        if (oddEven == 1){
+            midp2+=1;
+        }
+        return array[midp2];
+    } 
+        public static float middleItem(float array[]){
+        int oddEven = array.length%2;
+        int midp1 = array.length;
+        int midp2 = oddEven;
+        if (oddEven == 1){
+            midp2+=1;
+        }
+        return array[midp2];
+    } 
+        public static double middleItem(double array[]){
+        int oddEven = array.length%2;
+        int midp1 = array.length;
+        int midp2 = oddEven;
+        if (oddEven == 1){
+            midp2+=1;
+        }
+        return array[midp2];
+    } 
+    
 
 }
