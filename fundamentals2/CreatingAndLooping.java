@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 public class CreatingAndLooping
 {
 
@@ -249,7 +250,8 @@ public class CreatingAndLooping
         }
         return array[midp2];
     } 
-        public static short middleItem(short array[]){
+
+    public static short middleItem(short array[]){
         int oddEven = array.length%2;
         int midp1 = array.length;
         int midp2 = oddEven;
@@ -258,7 +260,8 @@ public class CreatingAndLooping
         }
         return array[midp2];
     } 
-        public static byte middleItem(byte array[]){
+
+    public static byte middleItem(byte array[]){
         int oddEven = array.length%2;
         int midp1 = array.length;
         int midp2 = oddEven;
@@ -267,7 +270,8 @@ public class CreatingAndLooping
         }
         return array[midp2];
     } 
-        public static int middleItem(int array[]){
+
+    public static int middleItem(int array[]){
         int oddEven = array.length%2;
         int midp1 = array.length;
         int midp2 = oddEven;
@@ -276,7 +280,8 @@ public class CreatingAndLooping
         }
         return array[midp2];
     } 
-        public static char middleItem(char array[]){
+
+    public static char middleItem(char array[]){
         int oddEven = array.length%2;
         int midp1 = array.length;
         int midp2 = oddEven;
@@ -285,7 +290,8 @@ public class CreatingAndLooping
         }
         return array[midp2];
     } 
-        public static float middleItem(float array[]){
+
+    public static float middleItem(float array[]){
         int oddEven = array.length%2;
         int midp1 = array.length;
         int midp2 = oddEven;
@@ -294,7 +300,8 @@ public class CreatingAndLooping
         }
         return array[midp2];
     } 
-        public static double middleItem(double array[]){
+
+    public static double middleItem(double array[]){
         int oddEven = array.length%2;
         int midp1 = array.length;
         int midp2 = oddEven;
@@ -303,6 +310,24 @@ public class CreatingAndLooping
         }
         return array[midp2];
     } 
-    
+
+    public static long middleItem(long array[]){
+        int oddEven = array.length%2;
+        int midp1 = array.length;
+        int midp2 = oddEven;
+        if (oddEven == 1){
+            midp2+=1;
+        }
+        return array[midp2];
+    } 
+
+    public static int[] randomInts(int count, int min, int max){
+        Random rand = new Random();
+
+        int  range = rand.nextInt(max) + min;
+        for(int start=0;start=count;start++){
+            randomIntsArray[start]
+        }
+    }
 
 }
