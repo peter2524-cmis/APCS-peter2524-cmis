@@ -323,11 +323,19 @@ public class CreatingAndLooping
 
     public static int[] randomInts(int count, int min, int max){
         Random rand = new Random();
-
-        int  range = rand.nextInt(max) + min;
-        for(int start=0;start=count;start++){
-            randomIntsArray[start]
+        int[] randomIntsArray = new int[count];
+        randomIntsArray[0] = rand.nextInt(max)+min;
+        for(int start=1;start<randomIntsArray.length;start++){            
+            randomIntsArray[start]= rand.nextInt(max)+min;
         }
+        return randomIntsArray;
     }
 
+    public static double[] randomDoubles(int count, double min, double max){
+        Random rand = new Random();
+        int[] randomDoubles = new int[count];
+        double first = -min + rand.nextDouble() * max; 
+        for(
+        }
+    }
 }
