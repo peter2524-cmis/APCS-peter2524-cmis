@@ -333,9 +333,20 @@ public class CreatingAndLooping
 
     public static double[] randomDoubles(int count, double min, double max){
         Random rand = new Random();
-        int[] randomDoubles = new int[count];
+        double[] randomDoubles = new double[count];
         double first = -min + rand.nextDouble() * max; 
-        for(
+        for(int start=1;start<count;start++){
+            double rando = new Random().nextDouble();
+            randomDoubles[start] = rando;
+        }
+        return randomDoubles;
+    }
+
+    public static boolean[] copy(boolean[] array){
+        boolean[] copy = new boolean[array.length];
+        for (int i = 0; i<=array.length;i++){
+            
         }
     }
 }
+
