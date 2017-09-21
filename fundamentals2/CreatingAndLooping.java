@@ -345,8 +345,79 @@ public class CreatingAndLooping
     public static boolean[] copy(boolean[] array){
         boolean[] copy = new boolean[array.length];
         for (int i = 0; i<=array.length;i++){
-            
+            copy[i] = array[i];
         }
+        return copy;
     }
+
+    public static byte[] copy(byte[] array){
+        byte[] copy = new byte[array.length];
+        for (int i = 0; i<=array.length;i++){
+            copy[i] = array[i];
+        }
+        return copy;
+    }
+
+    public static char[] copy(char[] array){
+        char[] copy = new char[array.length];
+        for (int i = 0; i<=array.length;i++){
+            copy[i] = array[i];
+        }
+        return copy;
+    }
+
+    public static short[] copy(short[] array){
+        short[] copy = new short[array.length];
+        for (int i = 0; i<=array.length;i++){
+            copy[i] = array[i];
+        }
+        return copy;
+    }
+
+    public static int[] copy(int[] array){
+        int[] copy = new int[array.length];
+        for (int i = 0; i<=array.length;i++){
+            copy[i] = array[i];
+        }
+        return copy;
+    }
+
+    public static long[] copy(long[] array){
+        long[] copy = new long[array.length];
+        for (int i = 0; i<=array.length;i++){
+            copy[i] = array[i];
+        }
+        return copy;
+    }
+
+    public static float[] copy(float[] array){
+        float[] copy = new float[array.length];
+        for (int i = 0; i<=array.length;i++){
+            copy[i] = array[i];
+        }
+        return copy;
+    }
+
+    public static double[] copy(double[] array){
+        double[] copy = new double[array.length];
+        for (int i = 0; i<=array.length;i++){
+            copy[i] = array[i];
+        }
+        return copy;
+    }
+
+    public static int[] pairs(int n){
+        int[] pairs =  new int[(n*2)];
+        for(int i = 1; i<=(n+1);i++){
+            if(i%2 == 0){
+                pairs[i] = i;
+            }
+            else{
+                pairs[i] = i+1;
+            }
+        }
+        return pairs;
+    }
+
 }
 
