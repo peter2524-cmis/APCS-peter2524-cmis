@@ -5,4 +5,6 @@ comment1.params=a\ b
 comment1.target=int[]\ concat(int[],\ int[])
 comment2.params=a\ b
 comment2.target=int[]\ merge(int[],\ int[])
-numComments=3
+comment3.params=array
+comment3.target=void\ reverse(int[])
+numComments=4
