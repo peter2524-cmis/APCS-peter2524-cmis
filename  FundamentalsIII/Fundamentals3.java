@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 public class Fundamentals3
 {
 
@@ -16,8 +17,8 @@ public class Fundamentals3
         String[][] stringeighter = srprinter(8,8);
         double[] doubledefault = new double[5];
         double[][] doublesquare = new double[5][5];
-        //print2DArray(testIntsquare, true);
-        snakePrint(testIntsquare);
+        print2DArray(testIntsquare, false);
+        //snakePrint(testIntsquare);
     }
 
     public static String[][] srprinter(int rows, int cols){
@@ -118,7 +119,7 @@ public class Fundamentals3
     public static void print2DArray(int[][] array, boolean rowMajor){
         String printed = "";
         if(rowMajor == true){
-            for(int i = 0; i<=(array[0].length-1); i++){                
+            for(int i = 0; i<=(array.length-1); i++){                
                 for(int j = 0; j<=(array[0].length-1); j++){
                     printed+=(Integer.toString(array[i][j])+",");
                 }
@@ -127,7 +128,7 @@ public class Fundamentals3
             System.out.println(printed);
         }else{
             if(rowMajor == false){
-                for(int i = 0; i<=(array[0].length-1); i++){                
+                for(int i = 0; i<=(array.length-1); i++){                
                     for(int j = 0; j<=(array[0].length-1); j++){
                         printed+=(Integer.toString(array[j][i])+",");
                     }
@@ -224,4 +225,70 @@ public class Fundamentals3
         }
         System.out.println(printed);
     }
+
+    //modifying
+
+    public static String[][] locate(String[][] arr){
+        Random rando = new Random();
+        int randr = rando.nextInt(arr.length-1)+0;
+        int randc = rando.nextInt(arr[0].length-1)+0;
+        int randn = rando.nextInt(9)+0;
+        if(arr[randr][randc]==" "){
+            if(randc==arr[0].length-1){
+                randc-=1;
+                arr[randr][randc] = Integer.toString(randn);
+                return arr;
+            }else{
+                randc+=1;
+                arr[randr][randc] = Integer.toString(randn);
+                return arr;
+            }
+        }else{arr[randr][randc] = Integer.toString(randn);
+            return arr;
+        }
+    }
+
+    public static int[][] replace(int[][] array, int threshold, int newValue){
+        for(int i = 0; i<=(array.length-1);i++){
+            for(int j = 0; j<=(array[0].length-1);i++){
+                if(array[i][j]==threshold){
+                    array[i][j]=newValue;
+                }
+            }
+        }            
+        return array;
+    }
+
+    public static double[][] shift(double[][] arr, int row){
+        Random rando = new Random();
+        for(int i = 0; i<=(arr.length-1);i++){            
+            if( i >= row ){
+            }
+        }
+        return arr;
+    }
+
+    public static double[][] rotate(double[][] arr){
+        for(int i = 0; i<=(arr.length-1); i++){                
+            for(int j = 0; j<=(arr[0].length-1); j++){
+                arr[i][j]=arr[j][i];
+            }
+        }
+        return arr;
+    }
+
+    public static boolean[][] analyze(double[][] array, double threshold){
+        boolean[][] newarray = new boolean[array.length][array[0].length];
+        for(int i = 0; i<=(array.length-1); i++){                
+            for(int j = 0; j<=(array[0].length-1); j++){
+                if(array[i][j]>=threshold){
+                    newarray[i][j] = true;               
+                }else{
+                    newarray[i][j] = false;
+                }
+            }
+        }
+        return newarray;
+    }
+
 }
