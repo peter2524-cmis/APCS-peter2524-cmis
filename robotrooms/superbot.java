@@ -52,9 +52,33 @@ public class superbot extends Robot
         }
         else if(getData(0) == 2){
             if(isClearRight()== true){
-                
-            right();            
+                right(); 
+            }else{
+                setData(1,(getX()-1));
+                setData(0,3);
+            }
         }
-   }
+        else if(getData(0) == 3){
+            if(getX()>2){
+                left();
+            }else{
+                setData(0,4);
+            }
+        }
+        else if(getData(0) == 4){
+            if(isClearDown()== true){
+                down(); 
+            }else{
+                setData(2,(getY()-1));
+                setData(0,5);
+            }
+        }
+        else if(getData(0) == 5){
+            if(getY()>2){
+                up();
+            }else{
+                setData(0,6);
+            }
+        }
+    }
 }
-   
