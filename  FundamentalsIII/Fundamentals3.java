@@ -260,12 +260,23 @@ public class Fundamentals3
     }
 
     public static double[][] shift(double[][] arr, int row){
-        Random rando = new Random();
+        double[][] nud = arr;
         for(int i = 0; i<=(arr.length-1);i++){            
-            if( i >= row ){
+            if( i > row ){                               
+                nud[i] = arr[i-1];
+            }else if(i==row){
+                for(int j = 0; j<=(arr[0].length-1);j++){
+                    double start = 0;
+                    double end = 10;
+                    double random = new Random().nextDouble();
+                    double result = start + (random * (end - start));
+                    nud[i][j] = result;
+                }
+            }else{
+                nud[i] = arr[i];
             }
         }
-        return arr;
+        return nud;
     }
 
     public static double[][] rotate(double[][] arr){
