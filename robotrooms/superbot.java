@@ -3,7 +3,7 @@ import java.awt.Color;
 public class superbot extends Robot
 {
     public superbot(){
-        super(Color.black);
+        super(Color.red);
     }
 
     public void init(){
@@ -30,10 +30,18 @@ public class superbot extends Robot
     public void behave(){
         if(getData(0) == 0){
             if(getX()> 2){
-                left();
+                if(isClearLeft()==false){
+                    up();
+                }else{
+                    left();
+                }
             }
             else if(getX()< 2){
-                right();
+                if(isClearRight()==false){
+                    up();
+                }else{
+                    right();
+                }
             }
             else{
                 setData(0,1);
@@ -62,17 +70,9 @@ public class superbot extends Robot
             if(getX()>2){
                 left();
             }else{
-                setData(0,4);
-            }
-        }
-        else if(getData(0) == 4){
-            if(isClearDown()== true){
-                down(); 
-            }else{
-                setData(2,(getY()-1));
                 setData(0,5);
             }
-        }
+        }                
         else if(getData(0) == 5){
             if(getY()>2){
                 up();
@@ -80,5 +80,31 @@ public class superbot extends Robot
                 setData(0,6);
             }
         }
+        else if(getData(0) == 6){
+            if(getY()%2 == 0){
+                if(isClearRight() == false){
+                    //gena stuff
+                    setData(0,
+                }else{
+                    if(getX() == getData(1)){
+                        down();
+                    }else{
+                        right();
+                    }
+                }
+            }else{
+                if(isClearLeft() == false){
+                    //gena stuff
+                }
+                else{
+                    if(getX() == 2){
+                        down();
+                    }else{
+                        left();
+                    }
+                }
+            }
+        }
     }
-}
+    
+
