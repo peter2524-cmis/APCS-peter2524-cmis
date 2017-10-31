@@ -82,24 +82,8 @@ public class superboi extends Robot
             }
         }
         else if(getData(0) == 6){
-            if(isClearDown() == false){
-                setData(3,getData(3)+1);
-                setData(4,1);
-                if(getY()%2 == 0 && isClearDown() == false && getData(3) != 100){
 
-                    right();
-                }else if(getY()%2 == 1 && isClearDown() == false && getData(3) != 100){
-
-                    left();
-                }
-
-                else if(getData(4) == 1 && isClearDown() == true && getData(3) != 11 ){
-                    setData(3,100);                    
-                }else if(getData(3) == 1){
-                    setData(3,101);
-                    down();
-                }
-            }else if(getY()%2 == 0){
+            if(getY()%2 == 0){
                 if(isClearRight() == false){
                     //gena stuff
                     setData(0,7);
@@ -114,7 +98,36 @@ public class superboi extends Robot
             }else if(getY()%2 == 1){
                 if(isClearLeft() == false){
                     //gena stuff
-                    setData(0,8);
+                    setData(0,62);
+                    up();
+                }
+                else{
+                    if(getX() == 2){
+                        down();
+                    }else{
+                        left();
+                    }
+                }
+            }             
+        }
+        else if(getData(0) == 62){
+            if(getY()%2 == 1){
+                if(isClearRight() == false){
+                    //gena stuff
+                    setData(0,7);
+                }
+                else{
+                    if(getX() == getData(1)){
+                        down();
+                    }else{
+                        right();
+                    }
+                }
+            }else if(getY()%2 == 0){
+                if(isClearLeft() == false){
+                    //gena stuff
+                    setData(0,62);
+                    up();
                 }
                 else{
                     if(getX() == 2){
@@ -139,9 +152,131 @@ public class superboi extends Robot
                         }
                     }
                 }else{
-                    setData(3,2);
-                    right();
+                    if(getData(3) == 0){
+                        setData(3,2);
+                    }
+                    else if(getData(3) == 2){
+                        setData(3,3);
+                        right();
+                    }else if(getData(3) == 3){
+                        setData(3,4);
+                        right();
+                    }else if(getData(3) == 4){
+                        if(isClearUp() == true){
+                            up();
+                        }
+                        else{
+                            if(getX()%2 == 0){
+                                setData(3,5);
+                            }else{
+                                setData(3,6);
+                            }
+                        }
+
+                    }else if(getData(3) == 5){
+                        if(getX()%2 == 0){
+                            if(isClearDown() == true){
+                                down();
+                            }else{
+                                right();
+                            }
+                        }else{
+                            if(isClearUp() == true){
+                                up();
+                            }else{
+                                right();
+                            }
+                        }
+                    }else if(getData(3) == 6){
+                        if(getX()%2 == 1){
+                            if(isClearDown() == true){
+                                down();
+                            }else{
+                                right();
+                            }
+                        }else{
+                            if(isClearUp() == true){
+                                up();
+                            }else{
+                                right();
+                            }
+                        }
+                    }
                 }
+            }
+            else{
+                setData(2,-1);
+                setData(0,8);
+            }
+        }else if(getData(0) == 8){
+            if(getData(2) <= 10){
+                if(isClearRight() == false){
+                    setData(2,getData(2)+1);
+                    if(isClearRight() == false){
+                        down();
+                    }else{
+                        if(isClearDown() == true){
+                            setData(3,1);
+                        }else{
+                            setData(3,2);
+                        }
+                    }
+                }else{
+                    if(getData(3) == 0){
+                        setData(3,2);
+                    }
+                    else if(getData(3) == 2){
+                        setData(3,3);
+                        right();
+                    }else if(getData(3) == 3){
+                        setData(3,4);
+                        right();
+                    }else if(getData(3) == 4){
+                        if(isClearUp() == true){
+                            up();
+                        }
+                        else{
+                            if(getX()%2 == 0){
+                                setData(3,5);
+                            }else{
+                                setData(3,6);
+                            }
+                        }
+
+                    }else if(getData(3) == 5){
+                        if(getX()%2 == 0){
+                            if(isClearDown() == true){
+                                down();
+                            }else{
+                                right();
+                            }
+                        }else{
+                            if(isClearUp() == true){
+                                up();
+                            }else{
+                                right();
+                            }
+                        }
+                    }else if(getData(3) == 6){
+                        if(getX()%2 == 1){
+                            if(isClearDown() == true){
+                                down();
+                            }else{
+                                right();
+                            }
+                        }else{
+                            if(isClearUp() == true){
+                                up();
+                            }else{
+                                right();
+                            }
+                        }
+                    }
+                }
+            }
+            else{
+                setData(2,-1);
+                setData(0,8);
             }
         }
         System.out.println(getData(0)+"this is zero");
