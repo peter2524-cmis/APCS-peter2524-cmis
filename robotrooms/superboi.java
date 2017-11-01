@@ -28,7 +28,7 @@ public class superboi extends Robot
      * public final void setData(int[] newData) => replaces values in data array with values in newData
      */
     public void behave(){
-        System.out.println(getData(0));
+
         if(getData(0) == 0){
             if(getX()> 2){
                 if(isClearLeft()==false){
@@ -139,7 +139,11 @@ public class superboi extends Robot
             }             
         }
         else if(getData(0) == 7){
-            if(getData(2) <= 10){
+            if(getData(2) == -1){
+                setData(2,0);
+                right();
+            }
+            else if(getData(2) <= 10){
                 if(isClearRight() == false){
                     setData(2,getData(2)+1);
                     if(isClearRight() == false){
@@ -207,15 +211,20 @@ public class superboi extends Robot
             else{
                 setData(2,-1);
                 setData(0,8);
+                setData(3,0);
             }
         }else if(getData(0) == 8){
-            if(getData(2) <= 10){
-                if(isClearRight() == false){
+            if(getData(2) == -1){
+                setData(2,0);
+                right();
+            }
+            else if(getData(2) <= 10){
+                if(isClearUp() == false){
                     setData(2,getData(2)+1);
-                    if(isClearRight() == false){
-                        down();
+                    if(isClearUp() == false){
+                        right();
                     }else{
-                        if(isClearDown() == true){
+                        if(isClearRight() == true){
                             setData(3,1);
                         }else{
                             setData(3,2);
@@ -227,10 +236,86 @@ public class superboi extends Robot
                     }
                     else if(getData(3) == 2){
                         setData(3,3);
-                        right();
+                        up();
                     }else if(getData(3) == 3){
                         setData(3,4);
-                        right();
+                        up();
+                    }else if(getData(3) == 4){
+                        if(isClearRight() == true){
+                            right();
+                        }
+                        else{
+                            if(getX()%2 == 0){
+                                setData(3,5);
+                            }else{
+                                setData(3,6);
+                            }
+                        }
+
+                    }else if(getData(3) == 5){
+                        if(getY()%2 == 0){
+                            if(isClearLeft() == true){
+                                left();
+                            }else{
+                                up();
+                            }
+                        }else{
+                            if(isClearRight() == true){
+                                right();
+                            }else{
+                                up();
+                            }
+                        }
+                    }else if(getData(3) == 6){
+                        if(getY()%2 == 1){
+                            if(isClearLeft() == true){
+                                left();
+                            }else{
+                                up();
+                            }
+                        }else{
+                            if(isClearRight() == true){
+                                right();
+                            }else{
+                                up();
+                            }
+                        }
+                    }
+                }
+            }
+            else{
+                setData(2,-1);
+                setData(0,9);
+                setData(3,0);
+            }
+
+        }else if(getData(0) == 9){
+            if(getData(2) == -1){
+                setData(2,0);
+                up();
+            }
+            else if(getData(2) <= 10){
+                if(isClearLeft() == false){
+                    setData(2,getData(2)+1);
+                    if(isClearLeft() == false){
+                        up();
+                    }else{
+                        if(isClearLeft() == true){
+                            setData(3,1);
+                        }else{
+                            setData(3,2);
+                        }
+                    }
+                }else{
+                    if(getData(3) == 0){
+                        setData(3,2);
+                    }
+                    else if(getData(3) == 2){
+                        setData(3,3);
+                        left();
+                    }else if(getData(3) == 3){
+                        setData(3,4);
+                        left();
                     }else if(getData(3) == 4){
                         if(isClearUp() == true){
                             up();
@@ -244,31 +329,31 @@ public class superboi extends Robot
                         }
 
                     }else if(getData(3) == 5){
-                        if(getX()%2 == 0){
-                            if(isClearDown() == true){
-                                down();
+                        if(getY()%2 == 0){
+                            if(isClearLeft() == true){
+                                left();
                             }else{
-                                right();
+                                up();
                             }
                         }else{
-                            if(isClearUp() == true){
-                                up();
-                            }else{
+                            if(isClearRight() == true){
                                 right();
+                            }else{
+                                up();
                             }
                         }
                     }else if(getData(3) == 6){
-                        if(getX()%2 == 1){
-                            if(isClearDown() == true){
-                                down();
+                        if(getY()%2 == 1){
+                            if(isClearLeft() == true){
+                                left();
                             }else{
-                                right();
+                                up();
                             }
                         }else{
-                            if(isClearUp() == true){
-                                up();
-                            }else{
+                            if(isClearRight() == true){
                                 right();
+                            }else{
+                                up();
                             }
                         }
                     }
@@ -276,12 +361,11 @@ public class superboi extends Robot
             }
             else{
                 setData(2,-1);
-                setData(0,8);
+                setData(0,9);
+                setData(3,0);
             }
+            System.out.println(getData(2));
         }
-        System.out.println(getData(0)+"this is zero");
-        System.out.println(getData(2)+"this is two");
-        System.out.println(getData(3)+"this is three");
     }
-}
+    }
 
