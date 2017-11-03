@@ -1,9 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.awt.Color;
-public class RobotTemplate extends Robot
+public class superboisimple extends Robot
 {
-    public RobotTemplate(){
-        super(Color.blue);
+    public superboisimple(){
+        super(Color.red);
     }
 
     public void init(){
@@ -20,9 +20,16 @@ public class RobotTemplate extends Robot
      * isClearRight() => true means no block to the left
      * isClearUp() => true means no block up
      * isClearDown() => true means no block down
+     * getX() => returns x coordinate of robot
+     * getY() => returns y coordinate of robot 
+     * public final int[] getData() => returns array of int data
+     * public final int getData(int idx) => returns int data from index idx
+     * public final void setData(int idx, int value) => sets value of data array at idx
+     * public final void setData(int[] newData) => replaces values in data array with values in newData
      */
+
     public void behave(){
-        //fgjhgjsfdjhfdj
+        System.out.println(getData(0));
         if(getData(0) == 0){
             step0();
         }else if(getData(0) == 1){
@@ -49,10 +56,10 @@ public class RobotTemplate extends Robot
 
     public void step0(){
         if(getData(0) == 0){
-            if(getY()> 2){
+            if(getY()> 4){
                 up();
             }
-            else if(getY()< 2){
+            else if(getY()< 4){
                 down();
             }
             else {
@@ -63,14 +70,14 @@ public class RobotTemplate extends Robot
 
     public void step1(){
         if(getData(0) == 1){
-            if(getX()> 2){
+            if(getX()> 4){
                 if(isClearLeft()==false){
                     up();
                 }else{
                     left();
                 }
             }
-            else if(getX()< 2){
+            else if(getX()< 4){
                 if(isClearRight()==false){
                     up();
                 }else{
@@ -88,7 +95,7 @@ public class RobotTemplate extends Robot
             if(isClearRight()== true){
                 right(); 
             }else{
-                setData(1,(getX()-1));
+                setData(1,(getX()-3));
                 setData(0,3);
             }
         }
@@ -126,7 +133,7 @@ public class RobotTemplate extends Robot
                     up();
                 }
                 else{
-                    if(getX() == 2){
+                    if(getX() == 4){
                         down();
                     }else{
                         left();
@@ -484,3 +491,4 @@ public class RobotTemplate extends Robot
         }
     }
 }
+

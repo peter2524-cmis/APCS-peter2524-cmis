@@ -1,0 +1,30 @@
+#BlueJ class context
+comment0.target=superboisimple
+comment1.params=
+comment1.target=superboisimple()
+comment10.params=
+comment10.target=void\ side1()
+comment11.params=
+comment11.target=void\ side2()
+comment12.params=
+comment12.target=void\ side3()
+comment13.params=
+comment13.target=void\ side4()
+comment2.params=
+comment2.target=void\ init()
+comment3.params=
+comment3.target=void\ behave()
+comment3.text=\n\ What\ your\ robot\ can\ do\:\n\ right()\ \=>\ move\ 1\ to\ the\ right\n\ left()\ \=>\ move\ 1\ to\ the\ left\n\ up()\ \=>\ move\ 1\ up\n\ down()\ \=>\ move\ 1\ down\n\ isClearRight()\ \=>\ true\ means\ no\ block\ to\ the\ right\n\ isClearRight()\ \=>\ true\ means\ no\ block\ to\ the\ left\n\ isClearUp()\ \=>\ true\ means\ no\ block\ up\n\ isClearDown()\ \=>\ true\ means\ no\ block\ down\n\ getX()\ \=>\ returns\ x\ coordinate\ of\ robot\n\ getY()\ \=>\ returns\ y\ coordinate\ of\ robot\ \n\ public\ final\ int[]\ getData()\ \=>\ returns\ array\ of\ int\ data\n\ public\ final\ int\ getData(int\ idx)\ \=>\ returns\ int\ data\ from\ index\ idx\n\ public\ final\ void\ setData(int\ idx,\ int\ value)\ \=>\ sets\ value\ of\ data\ array\ at\ idx\n\ public\ final\ void\ setData(int[]\ newData)\ \=>\ replaces\ values\ in\ data\ array\ with\ values\ in\ newData\n
+comment4.params=
+comment4.target=void\ step0()
+comment5.params=
+comment5.target=void\ step1()
+comment6.params=
+comment6.target=void\ step2()
+comment7.params=
+comment7.target=void\ step3()
+comment8.params=
+comment8.target=void\ step6()
+comment9.params=
+comment9.target=void\ step62()
+numComments=14
