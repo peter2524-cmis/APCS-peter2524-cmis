@@ -145,32 +145,12 @@ public class superboisimple extends Robot
 
     public void step62(){
         if(getData(0) == 62){
-            if(getY()%2 == 1){
-                if(isClearRight() == false){
-                    //gena stuff
-                    setData(0,7);
-                }
-                else{
-                    if(getX() == getData(1)){
-                        down();
-                    }else{
-                        right();
-                    }
-                }
-            }else if(getY()%2 == 0){
-                if(isClearLeft() == false){
-                    //gena stuff
-                    setData(0,62);
-                    up();
-                }
-                else{
-                    if(getX() == 2){
-                        down();
-                    }else{
-                        left();
-                    }
-                }
-            }             
+            if(!isClearRight()){
+                up();
+            }else{
+                setData(2,-1);
+                setData(0,10);
+            }
         }
     }
 
@@ -414,7 +394,12 @@ public class superboisimple extends Robot
 
     public void side4(){
         if(getData(0) == 10){
-            if(getData(2) == -1){
+            if(!isClearUp()&&!isClearDown()){
+                setData(0,9);
+                setData(2,5);
+                setData(3,
+            }
+            else if(getData(2) == -1){
                 setData(2,0);
                 left();
             }
@@ -485,7 +470,7 @@ public class superboisimple extends Robot
             }
             else{
                 setData(2,-1);
-                setData(0,9);
+                setData(0,7);
                 setData(3,0);
             }
         }
