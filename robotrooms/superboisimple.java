@@ -29,7 +29,6 @@ public class superboisimple extends Robot
      */
 
     public void behave(){
-        System.out.println(getData(0));
         if(getData(0) == 0){
             step0();
         }else if(getData(0) == 1){
@@ -103,7 +102,7 @@ public class superboisimple extends Robot
 
     public void step3(){
         if(getData(0) == 3){
-            if(getX()>2){
+            if(getX()>4){
                 left();
             }else{
                 setData(0,6);
@@ -117,11 +116,13 @@ public class superboisimple extends Robot
             if(getY()%2 == 0){
                 if(isClearRight() == false){
                     //gena stuff
-                    setData(0,7);
+                    setData(0,63);
                 }
                 else{
                     if(getX() == getData(1)){
-                        down();
+                        if(getY()%9 !=0){
+                            down();
+                        }
                     }else{
                         right();
                     }
@@ -134,7 +135,9 @@ public class superboisimple extends Robot
                 }
                 else{
                     if(getX() == 4){
-                        down();
+                        if(getY()%9 !=0){
+                            down();
+                        }
                     }else{
                         left();
                     }
@@ -145,7 +148,7 @@ public class superboisimple extends Robot
 
     public void step62(){
         if(getData(0) == 62){
-            if(!isClearRight()){
+            if(!isClearLeft()){
                 up();
             }else{
                 setData(2,-1);
@@ -154,11 +157,22 @@ public class superboisimple extends Robot
         }
     }
 
+    public void step63(){
+        if(getData(0) == 63){
+            if(!isClearRight()){
+                up();
+            }else{
+                setData(2,-1);
+                setData(0,7);
+            }
+        }
+    }
+
     public void side1(){
         if(getData(0) == 7){
             if(getData(2) == -1){
                 setData(2,0);
-                right();
+                down();
             }
             else if(getData(2) <= 10){
                 if(isClearRight() == false){
@@ -393,87 +407,86 @@ public class superboisimple extends Robot
     }
 
     public void side4(){
-        if(getData(0) == 10){
-            if(!isClearUp()&&!isClearDown()){
-                setData(0,9);
-                setData(2,5);
-                setData(3,
-            }
-            else if(getData(2) == -1){
-                setData(2,0);
-                left();
-            }
-            else if(getData(2) <= 10){
-                if(isClearDown() == false){
-                    setData(2,getData(2)+1);
+        
+            if(getData(0) == 10){
+                if(!isClearUp()&&!isClearDown()){
+                    setData(0,9);
+                    setData(2,5);
+                    setData(3,0);
+                }else if(getData(2) == -1){
+                    setData(2,0);
+                    left();
+                }
+                else if(getData(2) <= 10){
                     if(isClearDown() == false){
-                        left();
-                    }else{
-                        if(isClearRight() == true){
-                            setData(3,1);
+                        setData(2,getData(2)+1);
+                        if(isClearDown() == false){
+                            left();
                         }else{
+                            if(isClearRight() == true){
+                                setData(3,1);
+                            }else{
+                                setData(3,2);
+                            }
+                        }
+                    }else{
+                        if(getData(3) == 0){
                             setData(3,2);
                         }
-                    }
-                }else{
-                    if(getData(3) == 0){
-                        setData(3,2);
-                    }
-                    else if(getData(3) == 2){
-                        setData(3,3);
-                        down();
-                    }else if(getData(3) == 3){
-                        setData(3,4);
-                        down();
-                    }else if(getData(3) == 4){
-                        if(isClearRight() == true){
-                            right();
-                        }
-                        else{
-                            if(getX()%2 == 0){
-                                setData(3,5);
-                            }else{
-                                setData(3,6);
+                        else if(getData(3) == 2){
+                            setData(3,3);
+                            down();
+                        }else if(getData(3) == 3){
+                            setData(3,4);
+                            down();
+                        }else if(getData(3) == 4){
+                            if(isClearRight() == true){
+                                right();
                             }
-                        }
+                            else{
+                                if(getX()%2 == 0){
+                                    setData(3,5);
+                                }else{
+                                    setData(3,6);
+                                }
+                            }
 
-                    }else if(getData(3) == 5){
-                        if(getY()%2 == 0){
-                            if(isClearLeft() == true){
-                                left();
+                        }else if(getData(3) == 5){
+                            if(getY()%2 == 0){
+                                if(isClearLeft() == true){
+                                    left();
+                                }else{
+                                    down();
+                                }
                             }else{
-                                down();
+                                if(isClearRight() == true){
+                                    right();
+                                }else{
+                                    down();
+                                }
                             }
-                        }else{
-                            if(isClearRight() == true){
-                                right();
+                        }else if(getData(3) == 6){
+                            if(getY()%2 == 1){
+                                if(isClearLeft() == true){
+                                    left();
+                                }else{
+                                    down();
+                                }
                             }else{
-                                down();
-                            }
-                        }
-                    }else if(getData(3) == 6){
-                        if(getY()%2 == 1){
-                            if(isClearLeft() == true){
-                                left();
-                            }else{
-                                down();
-                            }
-                        }else{
-                            if(isClearRight() == true){
-                                right();
-                            }else{
-                                down();
+                                if(isClearRight() == true){
+                                    right();
+                                }else{
+                                    down();
+                                }
                             }
                         }
                     }
                 }
-            }
-            else{
-                setData(2,-1);
-                setData(0,7);
-                setData(3,0);
+                else{
+                    setData(2,-1);
+                    setData(0,7);
+                    setData(3,0);
+                }
             }
         }
-    }
 }
-
