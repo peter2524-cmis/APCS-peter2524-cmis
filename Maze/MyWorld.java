@@ -56,7 +56,7 @@ public class MyWorld extends World
             addObject(new theSucc(bd), 1,1); //<<<<<< Change this to your robot.
             
         }
-        System.out.println(steps);
+        //System.out.println(steps);
     }
 
     public void path(){

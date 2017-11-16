@@ -46,7 +46,7 @@ public class theSucc extends Robot
                 setData(0,1);
             }else if(!isClearLeft() && isClearUp() == true){
                 up();
-            }else if(isClearLeft() == true&& !isClearUp()){
+            }else if(isClearLeft() == true){
                 setData(0,3);
                 left();
             }
@@ -59,7 +59,7 @@ public class theSucc extends Robot
                 setData(0,2);
             }else if(!isClearUp() && isClearRight() == true){
                 right();
-            }else if(isClearUp() == true && !isClearRight()){
+            }else if(isClearUp() == true){
                 setData(0,0);
                 up();
             }
@@ -72,7 +72,7 @@ public class theSucc extends Robot
                 setData(0,3);
             }else if(!isClearRight() && isClearDown() == true){
                 down();
-            }else if(isClearRight() == true && !isClearDown()){
+            }else if(isClearRight() == true){
                 setData(0,1);
                 right();
             }
@@ -80,12 +80,12 @@ public class theSucc extends Robot
     }
 
     public void side4(){
-        if(getData(0) == 2){
+        if(getData(0) == 3){
             if(!isClearDown() && !isClearLeft()){
-                setData(0,1);
+                setData(0,0);
             }else if(!isClearDown() && isClearLeft() == true){
                 left();
-            }else if(isClearDown() == true && !isClearLeft()){
+            }else if(isClearDown() == true){
                 setData(0,2);
                 down();
             }
