@@ -19,7 +19,7 @@ public class SelectionSort
 
     public static void sort(int[] array){
         for(int i = 0; i<array.length; i++){
-            int find = 0;
+            int find = i;
             int low = array[i];
             for(int j = i; j <array.length; j++){
                 if(array[j]<low){
@@ -30,7 +30,9 @@ public class SelectionSort
             int hold = array[i];
             array[i] = array[find];
             array[find] = hold;
+            find = i;
         }
 
     }
+
 }
