@@ -1,9 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
 public class RobotTemplate extends Robot
 {
     public RobotTemplate(int d){
-        super(Color.red, d);
+        super(Color.RED, d);
     }
     
     public void init(){

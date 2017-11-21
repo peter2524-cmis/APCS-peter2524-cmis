@@ -1,9 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
 public class theSucc extends Robot
 {
     public theSucc(int d){
-        super(Color.blue, d);
+        super(Color.RED, d);
     }
 
     public void init(){
@@ -28,7 +27,6 @@ public class theSucc extends Robot
      * public final void setData(int[] newData) => replaces values in data array with values in newData
      */
     public void behave(){
-        System.out.println(getData(0));
         if(getData(0) == 0){
             side1();
         }else if(getData(0) == 1){

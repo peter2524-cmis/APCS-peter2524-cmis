@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import  java.awt.Color;
 
 public abstract class Robot extends Actor
 {
@@ -17,7 +16,7 @@ public abstract class Robot extends Actor
         img = new GreenfootImage(d,d);
         img.setColor(color);
         img.fill();
-        img.setColor(Color.black);
+        img.setColor(Color.BLACK);
         img.drawRect(0,0,d-1,d-1);
         setImage(img);
         init();

@@ -1,4 +1,4 @@
-public class SelectionSort
+public class InsertionSort
 {
     public static void main(String[] args){
         int[] numbers = new int[15];
@@ -18,24 +18,16 @@ public class SelectionSort
     }
 
     public static void sort(int[] array){
-        for(int i = 0; i<array.length; i++){
-            int find = i;
-            int low = array[i];
-            for(int j = i; j <array.length; j++){
-                if(array[j]<low){
-                    low = array[j];
-                    find = j;
+        for(int row = 1; row<array.length; row ++){
+            for(int i = row; i>0; i--){
+                if(array[i]<array[i-1]){
+                    int holder = array[i];
+                    array[i] = array[i-1];
+                    array[i-1] = holder;
                 }
+                
             }
-            int hold = array[i];
-            array[i] = array[find];
-            array[find] = hold;
-            find = i;
         }
-
-        
     }
-
     
-
-    }
+}

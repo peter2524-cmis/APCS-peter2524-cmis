@@ -1,9 +1,8 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo
 public class Wanderer extends Robot
 {
     public Wanderer(int d){
-        super(Color.red, d);
+        super(Color.RED, d);
     }
 
     public void init(){
