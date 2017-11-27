@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=recursives
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=w\ h\ symbol
+comment2.target=java.lang.String\ grid(int,\ int,\ java.lang.String)
+comment3.params=a\ b
+comment3.target=int\ mul(int,\ int)
+comment4.params=b
+comment4.target=int\ binToDec(java.lang.String)
+numComments=5
