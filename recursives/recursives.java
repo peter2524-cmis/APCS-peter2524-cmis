@@ -3,10 +3,9 @@ public class recursives{
     public static void main(String[] args){
         String gridP = grid(5, 5, "$");
         int mulP = mul(789456,-13);
-        int binToDecP = binToDec("1000");
-        System.out.println(mulP);
+        int binToDecP = binToDec("101111001");
+        System.out.println(binToDecP);
     }
-    
 
     public static String grid(int w, int h, String symbol){
         int wh = w;
@@ -36,17 +35,14 @@ public class recursives{
         }
     }
 
-    public static int binToDec(String b){
-        int size = b.length()-1;
-        int num = 0;
-        int end = 0;
-        if(b.charAt(num) == 1){
-            if(size == 0){
-                end = end*(-1);
-            }else{
-                
-            }
+    public static int binToDec(String b){  
+        int len = b.length();       
+        String now = b.substring(0,1);
+        String later = b.substring(1);      
+        if(len == 0){
+            return 0;
         }
-    }
 
+        return Integer.parseInt(now) * (int)Math.pow(2, len-1) + binToDec(later);
+    }
 }
