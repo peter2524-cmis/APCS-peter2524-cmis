@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=merger
+comment1.params=
+comment1.target=void\ main()
+comment2.params=arr
+comment2.target=int[]\ mergesort(int[])
+comment3.params=arr
+comment3.target=int[][]\ spliter(int[])
+comment4.params=a\ b
+comment4.target=int[]\ sort(int[],\ int[])
+comment5.params=array
+comment5.target=void\ printArray(int[])
+numComments=6
