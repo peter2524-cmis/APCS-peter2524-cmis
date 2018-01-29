@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=dragon
-comment1.params=
-comment1.target=dragon()
-comment2.params=psi\ length
-comment2.target=dragon(int,\ double)
-numComments=3
