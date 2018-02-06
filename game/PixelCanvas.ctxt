@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=PixelCanvas
+comment1.params=g
+comment1.target=void\ paint(java.awt.Graphics)
+comment2.params=
+comment2.target=java.awt.Color\ randomColor()
+comment3.params=
+comment3.target=java.awt.Color\ purple()
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5
