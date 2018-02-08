@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Person
+comment1.params=
+comment1.target=Person()
+comment10.params=inHat
+comment10.target=boolean\ goodHat(boolean)
+comment11.params=looksgood
+comment11.target=void\ fatDapper(boolean)
+comment12.params=
+comment12.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=
+comment3.target=int\ getAge()
+comment4.params=
+comment4.target=java.lang.Double\ getHeight()
+comment5.params=
+comment5.target=boolean\ getFat()
+comment6.params=newName
+comment6.target=void\ setName(java.lang.String)
+comment7.params=newAge
+comment7.target=void\ setAge(int)
+comment8.params=newHeight
+comment8.target=void\ setHeight(double)
+comment9.params=newFat
+comment9.target=void\ setFat(boolean)
+numComments=13
