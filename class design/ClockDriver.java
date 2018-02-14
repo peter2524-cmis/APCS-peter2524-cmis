@@ -8,5 +8,8 @@ public class ClockDriver{
         int secs = Integer.parseInt(JOptionPane.showInputDialog("What second is it"));
         Clock BedroomClock = new Clock(hours,mins,secs);
         System.out.println(BedroomClock);
+        kitchenClock.setTime(13,7,12);
+        kitchenClock.convertDaylightSaving(-1); 
+        System.out.println(kitchenClock);
     }
 }

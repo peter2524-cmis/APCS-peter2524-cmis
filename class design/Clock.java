@@ -37,6 +37,20 @@ public class Clock
         this.mins = 0;
         this.secs = 0;
     }
+    
+    public void setTime(int hours, int mins,int secs){
+        this.hours = hours;
+        this.mins = mins;
+        this.secs = secs;
+    }
+    
+    public void convertDaylightSaving( int hours ){
+        this.hours = this.hours+hours;
+    }
+    
+    public int totalSeconds(){
+        return (this.hours*3600)+this.mins*60+this.secs;
+    }
 
     public String toString(){
         String out = "The time is "+hours+":"+mins+":"+secs+" "+ indicator;
