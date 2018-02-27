@@ -1,3 +1,7 @@
 #BlueJ class context
 comment0.target=MyPod
-numComments=1
+comment1.params=
+comment1.target=MyPod()
+comment2.params=color\ stgb\ songs
+comment2.target=MyPod(java.lang.String,\ double,\ Song[])
+numComments=3

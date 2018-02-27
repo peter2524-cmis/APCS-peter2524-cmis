@@ -2,13 +2,13 @@
 editor.fx.0.height=726
 editor.fx.0.width=802
 editor.fx.0.x=279
-editor.fx.0.y=5
-objectbench.height=115
-objectbench.width=655
+editor.fx.0.y=0
+objectbench.height=216
+objectbench.width=654
 package.divider.horizontal=0.6
 package.divider.vertical=0.5627240143369175
 package.editor.height=150
-package.editor.width=549
+package.editor.width=548
 package.editor.x=0
 package.editor.y=370
 package.frame.height=370
