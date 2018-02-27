@@ -4,4 +4,6 @@ comment1.params=
 comment1.target=MyPod()
 comment2.params=color\ stgb\ songs
 comment2.target=MyPod(java.lang.String,\ double,\ Song[])
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ toString()
+numComments=4

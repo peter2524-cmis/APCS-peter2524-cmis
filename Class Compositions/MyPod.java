@@ -17,6 +17,14 @@ public class MyPod
     }
     
     public String toString(){
-        
+        String out = "";
+        out +="the colour is "+this.colour+"\n";
+        out +="It has a Storage capacity of "+this.stgb+" in gigabites \n";
+        out +="and on it are the songs";
+        for(Song song:songs){
+            out+=(song);
+            out+="";
+        }
+        return out;
     }
 }
