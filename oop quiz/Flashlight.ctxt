@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Flashlight
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment2.params=
+comment2.target=void\ toggle()
+comment3.params=newcolor
+comment3.target=void\ changeColor(java.lang.String)
+comment4.params=
+comment4.target=void\ incIntensity()
+comment5.params=
+comment5.target=void\ decIntensity()
+comment6.params=
+comment6.target=java.lang.String\ getIntensityDescription()
+comment7.params=args
+comment7.target=void\ main(java.lang.String[])
+numComments=8
