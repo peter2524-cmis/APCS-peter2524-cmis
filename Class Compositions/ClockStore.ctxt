@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ClockStore
+comment1.params=
+comment1.target=ClockStore()
+comment2.params=clocks\ name
+comment2.target=ClockStore(Clock[],\ java.lang.String)
+comment3.params=
+comment3.target=int\ mostSeconds()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5
