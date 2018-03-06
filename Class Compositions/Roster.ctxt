@@ -1,7 +1,13 @@
 #BlueJ class context
 comment0.target=Roster
 comment1.params=
-comment1.target=Roster()
-comment2.params=x
-comment2.target=Roster(java.lang.String)
-numComments=3
+comment1.target=java.lang.String\ getSaltString()
+comment2.params=
+comment2.target=Roster()
+comment3.params=x
+comment3.target=Roster(java.lang.String)
+comment4.params=
+comment4.target=Student\ findStudentWithMaxGPA()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
