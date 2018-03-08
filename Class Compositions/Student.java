@@ -79,6 +79,12 @@ public class Student{
         double gpa = (grades[0]+grades[1]+grades[2]+grades[3]+grades[4])/5;
         return gpa;
     }
+    
+    public String getLastName(){
+        String lastname = "";
+        lastname+=this.lname;
+        return lastname;
+    }
 
     public String toString(){
         letterSetter();
@@ -93,6 +99,7 @@ public class Student{
         out += "Grade in Fine Arts: " +grades[3]+letters[3]+"\n";
         out += "Grade in Social Science: " +grades[4]+letters[4]+"\n";
         out += "GPA: "+ calcGPA();
+        out += "\n";
         return out;
     }
 }
