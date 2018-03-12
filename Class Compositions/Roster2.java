@@ -23,21 +23,21 @@ public class Roster2{
         }
     }
 
-    public Roster2(String x){
-        for(int i = 0; i<myStudents.size(); i++){
-            String fname = getSaltString();
-            String lname = getSaltString();
-            int age = 6 + (int)(Math.random() * ((18 - 6) + 1));
-            double height = 1.0 + (double)(Math.random() * ((1.8 - 1) + 1.0));
-            double eng = 0.0 + (double)(Math.random() * ((4.0 - 0) + 0));
-            double math = 0.0 + (double)(Math.random() * ((4.0 - 0) + 0));
-            double sci = 0.0 + (double)(Math.random() * ((4.0 - 0) + 0));
-            double fArts = 0.0 + (double)(Math.random() * ((4.0 - 0) + 0));
-            double socsci = 0.0 + (double)(Math.random() * ((4.0 - 0) + 0));
-            Student stu = new Student(fname,lname,age,height,eng,math ,sci,fArts,socsci );
-            myStudents.set(i,stu);
-        }
-    }
+    // public Roster2(String x,int size){
+        // for(int i = 0; i<size; i++){
+            // String fname = getSaltString();
+            // String lname = getSaltString();
+            // int age = 6 + (int)(Math.random() * ((18 - 6) + 1));
+            // double height = 1.0 + (double)(Math.random() * ((1.8 - 1) + 1.0));
+            // double eng = 0.0 + (double)(Math.random() * ((4.0 - 0) + 0));
+            // double math = 0.0 + (double)(Math.random() * ((4.0 - 0) + 0));
+            // double sci = 0.0 + (double)(Math.random() * ((4.0 - 0) + 0));
+            // double fArts = 0.0 + (double)(Math.random() * ((4.0 - 0) + 0));
+            // double socsci = 0.0 + (double)(Math.random() * ((4.0 - 0) + 0));
+            // Student stu = new Student(fname,lname,age,height,eng,math ,sci,fArts,socsci );
+            // myStudents.set(i,stu);
+        // }
+    // }
 
     public Student findStudentWithMaxGPA(){
         Student mrSmartyPants = new Student();

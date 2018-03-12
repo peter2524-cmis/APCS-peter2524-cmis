@@ -9,11 +9,11 @@ public class MyPod2
         this.stgb = 8.9;
     }
 
-    public MyPod2(String color, double stgb,Song[] songs){
+    public MyPod2(String color, double stgb,Song[] songz){
         this.colour = color;
         this.stgb = stgb;
-        for(int x = 0;x<this.songs.size();x++){
-            this.songs.set(x,songs[x]);
+        for(int x = 0;x<songz.length;x++){
+            this.songs.add(songz[x]);
         }
     }
 
@@ -24,7 +24,7 @@ public class MyPod2
         out +="and on it are the songs";
         for(Song song:songs){
             out+=(song);
-            out+="";
+            out+="\n";
         }
         return out;
     }
