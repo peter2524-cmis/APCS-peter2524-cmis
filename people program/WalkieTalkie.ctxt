@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=WalkieTalkie
+comment1.params=name\ color\ kgs\ rangeInMs\ channels
+comment1.target=WalkieTalkie(java.lang.String,\ java.lang.String,\ double,\ double,\ int)
+comment2.params=
+comment2.target=void\ charge()
+numComments=3

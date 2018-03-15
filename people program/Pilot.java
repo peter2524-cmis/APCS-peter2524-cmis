@@ -1,4 +1,9 @@
 public class Pilot extends Person
 {    
-    private int x;    
+    public Pilot(String name,int age, String nationality){
+        super(name,age,nationality);
+    }
+
+    public boolean eat(String food){
+    }
 }

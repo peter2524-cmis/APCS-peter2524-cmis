@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=MyDevice
+comment1.params=newName
+comment1.target=void\ setName(java.lang.String)
+comment2.params=newColor
+comment2.target=void\ setColor(java.lang.String)
+numComments=3
