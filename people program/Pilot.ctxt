@@ -2,4 +2,8 @@
 comment0.target=Pilot
 comment1.params=name\ age\ nationality
 comment1.target=Pilot(java.lang.String,\ int,\ java.lang.String)
-numComments=2
+comment2.params=food
+comment2.target=boolean\ eat(java.lang.String)
+comment3.params=newHat
+comment3.target=java.lang.String\ applyHat(java.lang.String)
+numComments=4

@@ -4,4 +4,6 @@ comment1.params=name\ color\ kgs\ rangeInMs\ channels
 comment1.target=WalkieTalkie(java.lang.String,\ java.lang.String,\ double,\ double,\ int)
 comment2.params=
 comment2.target=void\ charge()
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ useMe()
+numComments=4

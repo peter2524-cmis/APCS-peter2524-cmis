@@ -1,4 +1,4 @@
-import java.util.JOptionPane;
+import javax.swing.JOptionPane;
 public class WalkieTalkie extends MyDevice{
     private int juice;
     private double kgs;
@@ -11,7 +11,7 @@ public class WalkieTalkie extends MyDevice{
         this.rangeInMs = rangeInMs;
         this.channels = channels;
     }
-    
+
     public void charge(){
         if(juice<91){
             juice+=10;
@@ -20,7 +20,9 @@ public class WalkieTalkie extends MyDevice{
             juice+=newCharge;
         }
     }
-    
+
     public String useMe(){
+        String said = JOptionPane.showInputDialog("What will you say?");
+        return said;
     }
 }
