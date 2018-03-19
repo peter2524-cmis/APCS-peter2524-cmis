@@ -1,7 +1,9 @@
 public class Pilot extends Person
 {    
-    public Pilot(String name,int age, String nationality){
+    private double pilotlevel;
+    public Pilot(String name,int age, String nationality,double pilotlevel){
         super(name,age,nationality);
+        this.pilotlevel = pilotlevel;        
     }
 
     public boolean eat(String food){
@@ -14,9 +16,9 @@ public class Pilot extends Person
         return success;
     }
     
-        public String applyHat(String newHat){
+    public String applyHat(String newHat){
         if(newHat.equals("pilot hat")){
-            super.applyHat(newHat);
+            super.applyHat(newHat);      
         }else{
             super.setInHat(false);
             newHat = "your head shall remain nude until you choose the right hat for the job";
