@@ -5,8 +5,7 @@ public class WalkieTalkie extends MyDevice{
     private double rangeInMs;
     private int channels;
     public WalkieTalkie(String name,String color,double kgs,double rangeInMs,int channels){
-        super.setName(name);
-        super.setColor(color);
+        super(name,color);
         this.kgs = kgs;
         this.rangeInMs = rangeInMs;
         this.channels = channels;
@@ -24,5 +23,15 @@ public class WalkieTalkie extends MyDevice{
     public String useMe(){
         String said = JOptionPane.showInputDialog("What will you say?");
         return said;
+    }
+    
+    public String toString(){
+        String out="";
+        out+="this device is a walkie talkie and \n";
+        out+=super.toString();
+        out+="it weighs "+kgs+" Kilograms \n";
+        out+="It has a range of "+rangeInMs+" metres \n";
+        out+="and it has "+channels+" channels \n";
+        return out;
     }
 }
