@@ -1,4 +1,4 @@
-public class TheIncredibleShoelace
+public class TheIncredibleShoelace extends SuperHero
 {
    public String motto(){
         String motto = "Get knotted evil doers";
