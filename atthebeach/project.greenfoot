@@ -1,0 +1,17 @@
+#Greenfoot properties
+#Wed Mar 28 11:54:59 ICT 2018
+simulation.speed=48
+class.Starfish.superclass=Animal
+mainWindow.width=850
+class.TheBeach.superclass=greenfoot.World
+class.Banana.superclass=Fruit
+class.Fruit.superclass=greenfoot.Actor
+class.Starfish.image=kangaroo.png
+project.charset=UTF-8
+version=3.0.0
+world.lastInstantiated=TheBeach
+mainWindow.y=40
+mainWindow.x=40
+class.Cherry.superclass=Fruit
+class.Animal.superclass=greenfoot.Actor
+mainWindow.height=600
