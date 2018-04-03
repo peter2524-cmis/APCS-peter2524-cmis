@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=name\ teachingAbility
+comment0.target=Teacher(java.lang.String,\ double)
+comment1.params=student\ lesson
+comment1.target=boolean\ teach(Student,\ java.lang.String)
+comment2.params=food
+comment2.target=boolean\ eat(java.lang.String)
+comment3.params=dx\ dy
+comment3.target=boolean\ move(int,\ int)
+comment4.params=wage
+comment4.target=void\ pay(double)
+numComments=5

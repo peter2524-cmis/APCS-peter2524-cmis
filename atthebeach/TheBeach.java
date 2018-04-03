@@ -15,7 +15,7 @@ public class TheBeach extends World
 {
     public static final int W = 900;
     public static final int H = 600;
-    public static final int NSTARFISH = 5;
+    public static final int NSTARFISH = 10;
     public static final int NDRAGON = 2;
     public TheBeach()
     {    
@@ -31,6 +31,7 @@ public class TheBeach extends World
     }
 
     public void act(){
+        int knights = 0;
         if(Math.random() > 0.95){
             int x = (int)(Math.random() * W);
             int y = (int)(Math.random() * H);
@@ -40,18 +41,24 @@ public class TheBeach extends World
                 addObject(new Cherry(), x, y);
             }
         }
-        
+        //Chicken spawner
+        List<Dragon> allDragon = getObjects(Dragon.class);
         if(Math.random()>.90){
             int x = (int)(Math.random() * W);
             int y = (int)(Math.random() * H);
-            
-            addObject(new Chicken(), x, y);
+            if(allDragon.size() == 0){
+            }else{
+                addObject(new Chicken(), x, y);
+            }
         }
-        
+
         List<Starfish> allStarfish = getObjects(Starfish.class);
-        if(allStarfish.size() == 0){
+        if(allStarfish.size() == 0 && knights == 0){
             showText("All the starfish are dead!", W/2, H/2);
-            Greenfoot.stop();
+            // for(int i = 0; i < NSTARFISH; i++){
+                // addObject(new Knight(), (int)(Math.random() * W), (int)(Math.random() * H));
+                // knights = 1;
+            // }
         } else if (allStarfish.size() == 1){
             showText("I'm so lonely!", W/2, H/2);
         }

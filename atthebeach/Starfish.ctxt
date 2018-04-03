@@ -2,8 +2,12 @@
 comment0.target=Starfish
 comment1.params=food
 comment1.target=boolean\ eat(greenfoot.Actor)
-comment2.params=
-comment2.target=void\ changePosition()
+comment2.params=touch
+comment2.target=void\ theTouch(greenfoot.Actor)
 comment3.params=
-comment3.target=void\ reproduce()
-numComments=4
+comment3.target=void\ changePosition()
+comment4.params=
+comment4.target=void\ reproduce()
+comment5.params=
+comment5.target=void\ drink()
+numComments=6
