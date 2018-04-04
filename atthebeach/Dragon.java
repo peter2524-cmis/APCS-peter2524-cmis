@@ -61,6 +61,6 @@ public class Dragon extends Animal
     
      public void drink(){
         turn(30 - (int)(Math.random() * 600));
-        move(700);
+        move(200);
     }
 }
