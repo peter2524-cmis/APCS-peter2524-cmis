@@ -1,0 +1,13 @@
+#Greenfoot properties
+#Thu Apr 05 14:30:27 ICT 2018
+class.TheGrid.superclass=greenfoot.World
+class.Bike.image=stockcycle
+mainWindow.width=850
+class.LazerWall.superclass=greenfoot.Actor
+class.Bike.superclass=greenfoot.Actor
+version=3.0.0
+project.charset=UTF-8
+world.lastInstantiated=TheGrid
+mainWindow.y=40
+mainWindow.x=40
+mainWindow.height=600
