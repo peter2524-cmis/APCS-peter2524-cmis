@@ -1,13 +1,23 @@
 #Greenfoot properties
-#Thu Apr 05 14:30:27 ICT 2018
-class.TheGrid.superclass=greenfoot.World
-class.Bike.image=stockcycle
-mainWindow.width=850
-class.LazerWall.superclass=greenfoot.Actor
-class.Bike.superclass=greenfoot.Actor
-version=3.0.0
+#Thu Apr 19 09:29:29 ICT 2018
 project.charset=UTF-8
-world.lastInstantiated=TheGrid
-mainWindow.y=40
-mainWindow.x=40
 mainWindow.height=600
+class.Player2.image=redcycle
+version=3.0.0
+class.p2LazWall.superclass=LazerWall
+class.Player1.superclass=Bike
+class.p2LazWall.image=lazer.jpeg
+class.Player2.superclass=Bike
+simulation.speed=46
+world.lastInstantiated=TheGrid
+class.WallDeath.superclass=
+class.LazerWall.superclass=greenfoot.Actor
+mainWindow.y=40
+class.p1LazWall.superclass=LazerWall
+mainWindow.x=40
+class.Bike.image=path3486.png
+class.TheGrid.superclass=greenfoot.World
+class.Bike.superclass=greenfoot.Actor
+class.LazerWall.image=lazer.jpeg
+mainWindow.width=850
+class.p1LazWall.image=lazer.jpeg

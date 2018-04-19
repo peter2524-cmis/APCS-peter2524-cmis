@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
 /**
  * Write a description of class LazerWall here.
  * 
@@ -9,15 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class LazerWall extends Actor
 {
     private GreenfootImage wall = new GreenfootImage("lazer.jpeg");
-    
+
     public void act() {
         wall.scale(3,3);
         setImage(wall);
-    }    
-    
-    public void kill(Bike bike) {
-        if(intersects(bike)){
-            TheGrid.death(bike);
-        }
+        List<LazerWall> walls = getObjectsInRange(7,LazerWall.class);
     }
+
 }
