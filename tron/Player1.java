@@ -17,7 +17,7 @@ public class Player1 extends Bike
     }
     public void act(){
         move(3);
-        if (Greenfoot.isKeyDown("d"))
+        if (Greenfoot.isKeyDown("s"))
         {
             turn(7);
         }
