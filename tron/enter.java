@@ -1,14 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class StartMenu here.
+ * Write a description of class enter here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class StartMenu extends World
-{
-    private boolean enter = false;
+public class enter extends World
+{    private boolean enter = false;
     private GreenfootImage cell = new GreenfootImage("download.png");
     private static final int w = 500;
     private static final int h = 500;
@@ -16,19 +15,15 @@ public class StartMenu extends World
      * Constructor for objects of class StartMenu.
      * 
      */
-    public StartMenu()
+    public enter()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(w, h, 1); 
+        Greenfoot.start();
         cell.scale(10,10);
         setBackground(cell);
-        Buttons plane = new PVT();
-        Buttons tron = new TVT();
-        addObject(plane,w/2,h/2+20);
-        addObject(tron,w/2,h/2-20);
-    }
-
-    public boolean tester(){
-        return enter;
+        Buttons enter = new Enter();
+        addObject(enter,w/2,h/2);
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
     }
 }

@@ -12,7 +12,7 @@ public class Buttons extends Actor
     public void act() 
     {
         setImage(cell);
-        // Add your action code here.
+        System.out.println(getLength());
     }    
     
     public int getLength(){
