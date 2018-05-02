@@ -1,28 +1,30 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class StartMenu here.
+ * Write a description of class TVToptions here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class StartMenu extends World
+public class TVToptions extends World
 {
     private boolean enter = false;
     private GreenfootImage cell = new GreenfootImage("download.png");
     private static final int w = 500;
     private static final int h = 500;
-    
-    public StartMenu()
+
+    public TVToptions()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(w, h, 1); 
         cell.scale(10,10);
-        setBackground(cell);
-        Buttons plane = new PVT();
-        Buttons tron = new TVT();
-        addObject(plane,w/2,h/2+20);
-        addObject(tron,w/2,h/2-20);
+        setBackground(cell);    
+        Two two = new Two();
+        Three three = new Three();
+        Four four = new Four();
+        addObject(two,40,40);
+        addObject(three,w/2,40);
+        addObject(four,w-40,40);
     }
 
     public boolean tester(){

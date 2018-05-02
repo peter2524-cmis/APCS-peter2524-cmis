@@ -3,7 +3,6 @@ comment0.target=StartMenu
 comment0.text=\n\ Write\ a\ description\ of\ class\ StartMenu\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=StartMenu()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ StartMenu.\n\ \n
 comment2.params=
 comment2.target=boolean\ tester()
 numComments=3

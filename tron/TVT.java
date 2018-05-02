@@ -12,5 +12,9 @@ public class TVT extends Buttons
     public void act() 
     {
         setImage(cell);
+        if (Greenfoot.mouseClicked(this)) {
+            TVToptions NextWorld = new TVToptions();
+            Greenfoot.setWorld(NextWorld);
+        }    
     }    
 }

@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=TheGrid
 comment0.text=\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=TheGrid()
-comment2.params=bike
-comment2.target=void\ death(Bike)
-numComments=3
+comment1.params=x
+comment1.target=TheGrid(int)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=bike
+comment3.target=void\ death(Bike)
+numComments=4
