@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class enter extends World
 {    private boolean enter = false;
     private GreenfootImage cell = new GreenfootImage("download.png");
-    private static final int w = 500;
-    private static final int h = 500;
+    private static final int w = 600;
+    private static final int h = 600;
     /**
      * Constructor for objects of class StartMenu.
      * 

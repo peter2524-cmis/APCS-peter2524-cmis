@@ -11,8 +11,8 @@ public class Dudgrid extends World
 
     private GreenfootImage cell = new GreenfootImage("download.png");
     private int x;
-    private static final int w = 500;
-    private static final int h = 500;
+    private static final int w = 600;
+    private static final int h = 600;
     public Dudgrid(int x)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -49,13 +49,13 @@ public class Dudgrid extends World
         }
 
         if(x == 4){
-            PIIII f = new PIIII();
+            Penter f = new Penter(4);
             addObject(f,w/2,h/2);
         }else if(x == 3){
-            PIII f = new PIII();
+            Penter f = new Penter(3);
             addObject(f,w/2,h/2);
         }else{
-            PII f = new PII();
+            Penter f = new Penter(2);
             addObject(f,w/2,h/2);
         }
     }    

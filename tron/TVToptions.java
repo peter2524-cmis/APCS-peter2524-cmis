@@ -10,8 +10,8 @@ public class TVToptions extends World
 {
     private boolean enter = false;
     private GreenfootImage cell = new GreenfootImage("download.png");
-    private static final int w = 500;
-    private static final int h = 500;
+    private static final int w = 600;
+    private static final int h = 600;
 
     public TVToptions()
     {    

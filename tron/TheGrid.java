@@ -10,12 +10,13 @@ public class TheGrid extends World
 {
     private GreenfootImage cell = new GreenfootImage("download.png");
     private int x;
-    private static final int w = 500;
-    private static final int h = 500;
+    private static final int w = 600;
+    private static final int h = 600;
     public TheGrid(int x)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(w, h, 1); 
+        this.x = x;
         cell.scale(10,10);
         setBackground(cell);
         if(x== 4){
@@ -60,8 +61,8 @@ public class TheGrid extends World
                 PAII pf = new PAII();
                 addObject(pf,w/2,h/2);
             }
-        }
 
+        }
     }
 
     public void death(Bike bike){

@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Wed May 02 14:27:28 ICT 2018
+#Thu May 03 14:18:38 ICT 2018
 editor.fx.0.height=726
 target2.width=90
 target8.name=Player2
@@ -62,8 +62,8 @@ class.Buttons.superclass=greenfoot.Actor
 mainWindow.width=1360
 readme.width=47
 class.powerups.superclass=greenfoot.Actor
-class.PlayAgain.superclass=Inst
 class.PIIII.superclass=Penter
+class.PlayAgain.superclass=Inst
 target9.name=Player1
 target5.height=50
 target10.name=Bike
@@ -91,8 +91,8 @@ class.Three.image=3.png
 target2.showInterface=false
 dependency1.from=TheGrid
 mainWindow.y=0
-class.PlayAgain.image=pa.png
 mainWindow.x=0
+class.PlayAgain.image=pa.png
 target5.showInterface=false
 dependency5.from=TheGrid
 target8.showInterface=false
@@ -114,8 +114,8 @@ target11.showInterface=false
 target10.y=0
 class.PAIII.superclass=PlayAgain
 target10.x=0
-class.Dudbike.superclass=Bike
 class.StartMenu.superclass=greenfoot.World
+class.Dudbike.superclass=Bike
 dependency2.to=Player1
 target12.width=90
 target11.name=Player4

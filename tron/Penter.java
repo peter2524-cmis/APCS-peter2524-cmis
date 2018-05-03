@@ -8,12 +8,28 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Penter extends Inst
 {
-    /**
-     * Act - do whatever the Penter wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act() 
-    {
-       
+    private int x;
+    public Penter(int x){
+        this.x = x;
+    }
+    public void act(){
+        if(x == 4){
+            if(Greenfoot.isKeyDown("enter") == true){
+                Greenfoot.setWorld(new TheGrid(4));
+            }
+        }else if(x == 3){
+            if(Greenfoot.isKeyDown("enter") == true){
+                Greenfoot.setWorld(new TheGrid(3));
+            }
+        }else if(x == 2){
+            if(Greenfoot.isKeyDown("enter") == true){
+                Greenfoot.setWorld(new TheGrid(2));
+            }
+        }else{
+            if(Greenfoot.isKeyDown("enter") == true){
+                Greenfoot.setWorld(new TheGrid(1));
+            }
+        }
+
     }    
 }
