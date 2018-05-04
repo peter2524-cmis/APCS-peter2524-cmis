@@ -9,16 +9,31 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class PlayAgain extends Inst
 {
     private int x;
-    /**
-     * Act - do whatever the playAgain wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public PlayAgain(int x){
+        this.x = x;
+    }
+
     public void act() 
     {
-        if(x == 3){
-            if(Greenfoot.mouseClicked(this)){
-                Greenfoot.setWorld(new Dudgrid(4));
+        if(x == 4){
+            if(Greenfoot.isKeyDown("y") == true){
+                Greenfoot.setWorld(new DudgridB(4));
+            }else if(Greenfoot.isKeyDown("n") == true){
+                Greenfoot.setWorld(new StartMenu());
             }
-        }    
+        }
+        else if(x == 3){
+            if(Greenfoot.isKeyDown("y") == true){
+                Greenfoot.setWorld(new DudgridB(3));
+            }else if(Greenfoot.isKeyDown("n") == true){
+                Greenfoot.setWorld(new StartMenu());
+            }
+        }else if(x == 2){
+            if(Greenfoot.isKeyDown("y") == true){
+                Greenfoot.setWorld(new DudgridB(2));
+            }else if(Greenfoot.isKeyDown("n") == true){
+                Greenfoot.setWorld(new StartMenu());
+            }
+        }
     }
 }

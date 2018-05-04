@@ -13,7 +13,6 @@ public class LazerWall extends Actor
     public void act() {
         wall.scale(3,3);
         setImage(wall);
-        List<LazerWall> walls = getObjectsInRange(7,LazerWall.class);
     }
 
 }

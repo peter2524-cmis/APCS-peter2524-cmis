@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.target=Dudgrid
+comment0.target=DudgridB
 comment0.text=\n\ Write\ a\ description\ of\ class\ Dudgrid\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=x
-comment1.target=Dudgrid(int)
+comment1.target=DudgridB(int)
 numComments=2

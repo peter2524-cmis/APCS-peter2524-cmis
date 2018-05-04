@@ -15,7 +15,7 @@ public class Two extends Numbers
     public void act() 
     {
         if (Greenfoot.mouseClicked(this)) {
-            Greenfoot.setWorld(new Dudgrid(2));
+            Greenfoot.setWorld(new DudgridB(2));
         }    
     }    
 }
