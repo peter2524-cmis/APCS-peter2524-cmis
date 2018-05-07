@@ -18,12 +18,14 @@ public class TVToptions extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(w, h, 1); 
         cell.scale(10,10);
-        setBackground(cell);    
+        setBackground(cell); 
+        One one = new One();
         Two two = new Two();
         Three three = new Three();
         Four four = new Four();
-        addObject(two,40,40);
-        addObject(three,w/2,40);
+        addObject(one,40,40);
+        addObject(two,200,40);
+        addObject(three,w-200,40);
         addObject(four,w-40,40);
     }
 

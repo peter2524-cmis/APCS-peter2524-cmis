@@ -40,6 +40,12 @@ public class DudgridB extends World
             addObject(player1,40,h/2);
             addObject(player2,w-40,h/2);
             addObject(player3,w/2,h-40);
+        }else if(x == 2){
+            Bike player1 = new Bike("d",0);
+            Bike player2 = new Bike("d",0);
+            player2.turn(180);
+            addObject(player1,40,h/2);
+            addObject(player2,w-40,h/2);
         }else{
             Bike player1 = new Bike("d",0);
             Bike player2 = new Bike("d",0);
@@ -54,8 +60,11 @@ public class DudgridB extends World
         }else if(x == 3){
             Penter f = new Penter(3);
             addObject(f,w/2,h/2);
-        }else{
+        }else if(x == 2){
             Penter f = new Penter(2);
+            addObject(f,w/2,h/2);
+        }else{
+            Penter f = new Penter(1);
             addObject(f,w/2,h/2);
         }
         for(int r = 0; r<=w;r = r+10){

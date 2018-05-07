@@ -34,6 +34,12 @@ public class PlayAgain extends Inst
             }else if(Greenfoot.isKeyDown("n") == true){
                 Greenfoot.setWorld(new StartMenu());
             }
+        }else{
+            if(Greenfoot.isKeyDown("y") == true){
+                Greenfoot.setWorld(new DudgridB(1));
+            }else if(Greenfoot.isKeyDown("n") == true){
+                Greenfoot.setWorld(new StartMenu());
+            }
         }
     }
 }

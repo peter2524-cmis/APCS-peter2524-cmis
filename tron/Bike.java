@@ -102,5 +102,6 @@ public  class Bike extends Actor
             myWorld.death(this);
         }
     }
+    
 }
 
