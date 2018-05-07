@@ -36,48 +36,6 @@ public class Baddy extends Actor
     public void act() 
     {
         TheGrid myWorld = (TheGrid) getWorld();
-        move(3);
-        lazer();
-        lazerdeath();
-        if(myWorld.getObjects(Bike.class).size()>0){
-            if (myWorld.P1X() == this.getX()){
-                if(myWorld.P1Y() == this.getY()){
-                }else if(myWorld.P1Y()>this.getY()){
-                    if(getRotation()<180){
-                        turn(7);
-                    }else{
-                        turn(-7);
-                    }
-                }else if(myWorld.P1Y()<this.getY()){
-                    if(getRotation()<180){
-                        turn(7);
-                    }else{
-                        turn(-7);
-                    }
-                }
-            }else{
-                if(myWorld.P1Y() == this.getY()){
-                }else if(myWorld.P1Y()>this.getY()){
-                    if(getRotation()<180){
-                        turn(-7);
-                    }else{
-                        turn(7);
-                    }
-                }else if(myWorld.P1Y()<this.getY()){
-                    if(getRotation()<180){
-                        turn(7);
-                    }else{
-                        turn(-7);
-                    }
-                }
-
-            }
-
-            if (myWorld.P1Y() == 1)
-            {
-                turn(-7);
-            }
-        }    
 
     }
 
