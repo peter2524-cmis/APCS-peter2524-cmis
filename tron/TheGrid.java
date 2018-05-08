@@ -17,6 +17,8 @@ public class TheGrid extends World
     private Bike player3 = new Bike("3",3);
     private Bike player4 = new Bike("4",4);
     private Baddy dude = new Baddy();
+    private UpSearch up = new UpSearch();
+    private DownSearch down = new DownSearch();
     public TheGrid(int x)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -44,7 +46,11 @@ public class TheGrid extends World
             addObject(player2,w-40,h/2);
         }else{
             dude.turn(180);
+            up.turn(180);
+            down.turn(180);
             addObject(player1,40,h/2);
+            addObject(up,w-40,h/2);
+            addObject(down,w-40,h/2);
             addObject(dude,w-40,h/2);
         }
 
@@ -78,7 +84,7 @@ public class TheGrid extends World
                 PlayAgain pf = new PlayAgain(1);
                 addObject(pf,w/2,h/2+40);
             }else if(getObjects(Bike.class).size()>getObjects(Baddy.class).size()){
-                String ded = "Bad Guys won";
+                String ded = "you Guys won";
                 showText(ded,w/2,h/2);
                 PlayAgain pf = new PlayAgain(1);
                 addObject(pf,w/2,h/2+40);
@@ -104,5 +110,13 @@ public class TheGrid extends World
 
     public int P1Y(){
         return player1.getY();
+    }
+    
+    public void bTurnL(){
+        dude.turn(-7);
+    }
+    
+    public void bTurnR(){
+        dude.turn(7);
     }
 }
