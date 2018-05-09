@@ -17,8 +17,7 @@ public class TheGrid extends World
     private Bike player3 = new Bike("3",3);
     private Bike player4 = new Bike("4",4);
     private Baddy dude = new Baddy();
-    private UpSearch up = new UpSearch();
-    private DownSearch down = new DownSearch();
+    public Border d = new Border();
     public TheGrid(int x)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -46,11 +45,9 @@ public class TheGrid extends World
             addObject(player2,w-40,h/2);
         }else{
             dude.turn(180);
-            up.turn(180);
-            down.turn(180);
+            d.turn(180);
             addObject(player1,40,h/2);
-            addObject(up,w-40,h/2);
-            addObject(down,w-40,h/2);
+            addObject(d,w-40,h/2);
             addObject(dude,w-40,h/2);
         }
 
@@ -92,6 +89,10 @@ public class TheGrid extends World
         }
     }
 
+    public int getX(){
+        return x;
+    }
+
     public void death(Bike bike){
         removeObject(bike);
         String ded = bike.getName()+" has died";
@@ -112,11 +113,15 @@ public class TheGrid extends World
         return player1.getY();
     }
     
-    public void bTurnL(){
-        dude.turn(-7);
+    public void bR(){
     }
-    
-    public void bTurnR(){
-        dude.turn(7);
+
+    public int bX(){
+        return dude.getX();
     }
+
+    public int bY(){
+        return dude.getY();
+    }
+
 }

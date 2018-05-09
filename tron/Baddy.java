@@ -9,6 +9,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Baddy extends Actor
 {
     private String Name;
+    private int x11;
+    private int y11;
+    private int x10;
+    private int y10;
+    private int x9;
+    private int y9;
+    private int x8;
+    private int y8;
     private int x7;
     private int y7;
     private int x6;
@@ -26,6 +34,14 @@ public class Baddy extends Actor
     private int pl;
 
     public void lazer(){
+        x11 = x10;
+        y11 = y10;
+        x10 = x9;
+        y10 = y9;
+        x9 = x8;
+        y9 = y8;
+        x8 = x7;
+        y8 = y7;
         x7 = x6;
         y7 = y6;
         x6 = x5;
