@@ -75,13 +75,18 @@ public class TheGrid extends World
                 }
             }
         }else{
-            if(getObjects(Baddy.class).size()>getObjects(Bike.class).size()){
+            if((getObjects(Baddy.class).size()== 1)&&(getObjects(Bike.class).size() == 0)){
                 String ded = "Bad Guys won";
                 showText(ded,w/2,h/2);
                 PlayAgain pf = new PlayAgain(1);
                 addObject(pf,w/2,h/2+40);
-            }else if(getObjects(Bike.class).size()>getObjects(Baddy.class).size()){
+            }else if((getObjects(Bike.class).size()== 1)&&(getObjects(Baddy.class).size() == 0)){
                 String ded = "you Guys won";
+                showText(ded,w/2,h/2);
+                PlayAgain pf = new PlayAgain(1);
+                addObject(pf,w/2,h/2+40);
+            }else if((((getObjects(Baddy.class).size()== 0)&&(getObjects(Bike.class).size() == 0)))){
+                String ded = "No Guys won";
                 showText(ded,w/2,h/2);
                 PlayAgain pf = new PlayAgain(1);
                 addObject(pf,w/2,h/2+40);
@@ -112,8 +117,13 @@ public class TheGrid extends World
     public int P1Y(){
         return player1.getY();
     }
-    
+
     public void bR(){
+        dude.turn(7);
+    }
+
+    public void bL(){
+        dude.turn(-7);
     }
 
     public int bX(){

@@ -58,7 +58,7 @@ public class Baddy extends Actor
         y1 = getY();
         TheGrid myWorld = (TheGrid) getWorld();
         LazerWall laz = new LazerWall();
-        myWorld.addObject(laz,x7,y7);
+        myWorld.addObject(laz,x11,y11);
     }
 
     public void act() 
