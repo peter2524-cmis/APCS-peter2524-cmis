@@ -1,15 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Border here.
+ * Write a description of class border here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class Border extends Actor
 {
-    private boolean[] turnVals = new boolean[4];
-    public void act()     
+    /**
+     * Act - do whatever the border wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
+    public void act() 
     {
         TheGrid myWorld = (TheGrid) getWorld();
         if(myWorld.getObjects(Baddy.class).size()>0){
@@ -24,87 +27,60 @@ public class Border extends Actor
         boolean br = testBR(getX(),getY());
 
         if((tl == true && tr == false && bl == false && br == false)||(tl == true && tr == true && bl == false && br == false)){
-            myWorld.bL();
+            myWorld.biR();
         }else if((tl == false && tr == true && bl == false && br == false)||(tl == false && tr == true && bl == false && br == true)){
-            myWorld.bR();
+            myWorld.biR();
         }else if((tl == false && tr == false && bl == false && br == true)||(tl == false && tr == false && bl == true && br == true)){ 
-            myWorld.bR();
+            myWorld.biL();
         }else if((tl == false && tr == false && bl == true && br == false)||(tl == true && tr == false && bl == true && br == false)){
         }
-    }
+    }    
 
     public boolean testTL(int x, int y){
         TheGrid myWorld = (TheGrid) getWorld();
-        
-        if(x<= getX()+20&&y<=getY()+20){
-            
-            if(myWorld.getObjectsAt(x,y,LazerWall.class).size()>0||myWorld.getObjectsAt(x,y,Invisilazer.class).size()>0){
-                System.out.println(x);
-                return true;
-            }else{
-                if(x==getX()+20){
-                    return testTR(x-20,y+1);
-                    
-                }else{
-
-                    return testTR(x+1,y);
-                    
+        for(int i = 0; i<21;i++){
+            for(int j = 0;j<21;j++){
+                if(myWorld.getObjectsAt(x+j,y+i,LazerWall.class).size()>0||myWorld.getObjectsAt(x+j,y+i,Invisilazer.class).size()>0){
+                    return true;
                 }
             }
-        }else{
-            return false;
         }
+        return false;
     }
 
     public boolean testTR(int x, int y){
         TheGrid myWorld = (TheGrid) getWorld();
-        if(x<= getX()-20&&y<=getY()+20){
-            if(myWorld.getObjectsAt(x,y,LazerWall.class).size()>0||myWorld.getObjectsAt(x,y,Invisilazer.class).size()>0){
-                return true;
-            }else{
-                if(x==getX()-20){
-                    return testTR(x-20,y+1);
-                }else{
-                    return testTR(x-1,y);
+        for(int i = 0; i<21;i++){
+            for(int j = 0;j<21;j++){
+                if(myWorld.getObjectsAt(x-j,y+i,LazerWall.class).size()>0||myWorld.getObjectsAt(x-j,y+i,Invisilazer.class).size()>0){
+                    return true;
                 }
             }
-        }else{
-            return false;
         }
+        return false;
     }
 
     public boolean testBL(int x, int y){
         TheGrid myWorld = (TheGrid) getWorld();
-        if(x<= getX()+20&&y<=getY()-20){
-            if(myWorld.getObjectsAt(x,y,LazerWall.class).size()>0||myWorld.getObjectsAt(x,y,Invisilazer.class).size()>0){
-                return true;
-            }else{
-                if(x==getX()+20){
-                    return testTR(x+20,y-1);
-                }else{
-                    return testTR(x+1,y);
+        for(int i = 0; i<21;i++){
+            for(int j = 0;j<21;j++){
+                if(myWorld.getObjectsAt(x+j,y-i,LazerWall.class).size()>0||myWorld.getObjectsAt(x+j,y-i,Invisilazer.class).size()>0){
+                    return true;
                 }
             }
-        }else{
-            return false;
         }
+        return false;
     }
 
     public boolean testBR(int x, int y){
         TheGrid myWorld = (TheGrid) getWorld();
-        if(x<= getX()-20&&y<=getY()-20){
-            if(myWorld.getObjectsAt(x,y,LazerWall.class).size()>0||myWorld.getObjectsAt(x,y,Invisilazer.class).size()>0){
-                return true;
-            }else{
-                if(x==getX()-20){
-                    return testTR(x-20,y-1);
-                }else{
-                    return testTR(x-1,y);
+        for(int i = 0; i<21;i++){
+            for(int j = 0;j<21;j++){
+                if(myWorld.getObjectsAt(x-j,y-i,LazerWall.class).size()>0||myWorld.getObjectsAt(x-j,y-i,Invisilazer.class).size()>0){
+                    return true;
                 }
             }
-        }else{
-            return false;
         }
+        return false;
     }
-
 }

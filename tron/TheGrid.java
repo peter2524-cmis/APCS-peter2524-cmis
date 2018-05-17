@@ -118,11 +118,11 @@ public class TheGrid extends World
         return player1.getY();
     }
 
-    public void bR(){
+    public void biR(){
         dude.turn(7);
     }
 
-    public void bL(){
+    public void biL(){
         dude.turn(-7);
     }
 

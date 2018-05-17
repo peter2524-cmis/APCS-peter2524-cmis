@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=ted
+comment0.text=\n\ Write\ a\ description\ of\ class\ Border\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=x\ y
+comment2.target=boolean\ testTL(int,\ int)
+comment3.params=x\ y
+comment3.target=boolean\ testTR(int,\ int)
+comment4.params=x\ y
+comment4.target=boolean\ testBL(int,\ int)
+comment5.params=x\ y
+comment5.target=boolean\ testBR(int,\ int)
+numComments=6

@@ -67,6 +67,7 @@ public class Baddy extends Actor
         lazer();
         lazerdeath();
         move(3);
+        System.out.println(getRotation());
 
     }
 
