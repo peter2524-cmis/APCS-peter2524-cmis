@@ -50,11 +50,20 @@ public class TheGrid extends World
             addObject(d,w-40,h/2);
             addObject(dude,w-40,h/2);
         }
-
-        for(int r = 0; r<=w;r = r+10){
-            for(int c = 0; c<=h;c = c+10){
-                if(r == 0||r == w || c == 0 || c== h){
-                    addObject(new Invisilazer(),r,c);
+        if(x!=1){
+            for(int r = 0; r<=w;r = r+10){
+                for(int c = 0; c<=h;c = c+10){
+                    if(r == 0||r == w || c == 0 || c== h){
+                        addObject(new Invisilazer(),r,c);
+                    }
+                }
+            }
+        }else{
+            for(int r = 0; r<=w;r = r+1){
+                for(int c = 0; c<=h;c = c+1){
+                    if(r == 0||r == w || c == 0 || c== h){
+                        addObject(new LazerWall(),r,c);
+                    }
                 }
             }
         }
@@ -120,6 +129,10 @@ public class TheGrid extends World
 
     public void biR(){
         dude.turn(7);
+    }
+
+    public int rotation(){
+        return dude.getRotation();
     }
 
     public void biL(){

@@ -21,29 +21,38 @@ public class Border extends Actor
             setLocation(x,y);
 
         }
-        boolean tl = testTL(getX(),getY());
+        boolean bl = testTL(getX(),getY());
         boolean tr = testTR(getX(),getY());
-        boolean bl = testBL(getX(),getY());
+        boolean tl = testBL(getX(),getY());
         boolean br = testBR(getX(),getY());
-
-        if((tl == true && tr == false && bl == false && br == false)||(tl == true && tr == true && bl == false && br == false)){
-            myWorld.biR();
-        }else if((tl == false && tr == true && bl == false && br == false)||(tl == false && tr == true && bl == false && br == true)){
-            myWorld.biR();
-        }else if((tl == false && tr == false && bl == false && br == true)||(tl == false && tr == false && bl == true && br == true)){ 
-            myWorld.biL();
-        }else if((tl == false && tr == false && bl == true && br == false)||(tl == true && tr == false && bl == true && br == false)){
+        //facing left
+        if(myWorld.rotation()>=135 && myWorld.rotation() <225){
+            if(bl == true){
+                myWorld.biR();
+            }else if(tl == true){
+                myWorld.biL();
+            }
+        //facing down
+        }else if(myWorld.rotation()>=225 && myWorld.rotation() <315){
+            if(bl == true){
+                myWorld.biL();
+            }else if(br == true){
+                myWorld.biL();
+            }
+            
         }
-    }    
+    }
 
     public boolean testTL(int x, int y){
         TheGrid myWorld = (TheGrid) getWorld();
-        for(int i = 0; i<21;i++){
+        int i = 0;
+        while(i<21){
             for(int j = 0;j<21;j++){
                 if(myWorld.getObjectsAt(x+j,y+i,LazerWall.class).size()>0||myWorld.getObjectsAt(x+j,y+i,Invisilazer.class).size()>0){
                     return true;
                 }
             }
+            i++;
         }
         return false;
     }
