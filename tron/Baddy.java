@@ -69,6 +69,8 @@ public class Baddy extends Actor
         move(3);
     }
 
+    
+
     public void lazerdeath(){
         if(isTouching(LazerWall.class) == true|| isTouching(Invisilazer.class) == true){
             TheGrid myWorld = (TheGrid) getWorld();

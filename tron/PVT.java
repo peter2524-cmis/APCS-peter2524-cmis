@@ -17,5 +17,9 @@ public class PVT extends Buttons
     public void act() 
     {
         setImage(cell);
+        if (Greenfoot.mouseClicked(this)) {
+            PVToptions NextWorld = new PVToptions();
+            Greenfoot.setWorld(NextWorld);
+        }    
     }    
 }

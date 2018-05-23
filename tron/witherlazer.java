@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Inst here.
+ * Write a description of class witherlazer here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public abstract class Inst extends Actor
+public class witherlazer extends LazerWall
 {
     /**
-     * Act - do whatever the Inst wants to do. This method is called whenever
+     * Act - do whatever the witherlazer wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 

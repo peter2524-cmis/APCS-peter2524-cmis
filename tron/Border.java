@@ -19,27 +19,91 @@ public class Border extends Actor
             int x = myWorld.bX();
             int y = myWorld.bY();
             setLocation(x,y);
+            wallturn();
 
         }
         boolean bl = testTL(getX(),getY());
         boolean tr = testTR(getX(),getY());
         boolean tl = testBL(getX(),getY());
         boolean br = testBR(getX(),getY());
-        //facing left
-        if(myWorld.rotation()>=135 && myWorld.rotation() <225){
-            if(bl == true){
+
+        if(bl||tr||tl||br == true){
+            //facing left
+            if(myWorld.rotation()>=135 && myWorld.rotation() <225){
+                if(bl == true){
+                    myWorld.biR();
+                }else if(tl == true){
+                    myWorld.biL();
+                }
+                //facing up
+            }else if(myWorld.rotation()>=225 && myWorld.rotation() <315){
+                if(tl == true){
+                    myWorld.biL();
+                }else if(tr == true){
+                    myWorld.biR();
+                }
+                //facing right
+            }else if(myWorld.rotation()>=315|| myWorld.rotation() >=0 &&myWorld.rotation()< 45){
+                if(tr == true){
+                    myWorld.biR();
+                }else if(br == true){
+                    myWorld.biL();
+                }
+                //facing down
+            }else{
+                if(br == true){
+                    myWorld.biL();
+                }else if(bl == true){
+                    myWorld.biR();
+                }
+
+            }
+            //System.out.println(myWorld.rotation());
+        }else{
+            if (Greenfoot.isKeyDown("s"))
+            {
                 myWorld.biR();
-            }else if(tl == true){
+            }
+            if (Greenfoot.isKeyDown("a"))
+            {
                 myWorld.biL();
             }
-        //facing down
-        }else if(myWorld.rotation()>=225 && myWorld.rotation() <315){
-            if(bl == true){
-                myWorld.biL();
-            }else if(br == true){
-                myWorld.biL();
+        }
+    }
+
+    public void wallturn(){
+        TheGrid myWorld = (TheGrid) getWorld();
+        if(myWorld.getObjects(Baddy.class).size()>0){
+            int wr = myWorld.getW()-20;
+            int hd = myWorld.getH()-20;
+            if(getX() <= 20){
+                if(myWorld.rotation()>=90 && myWorld.rotation() <180){
+                    myWorld.biL();
+                }else if(myWorld.rotation()>=180 && myWorld.rotation() <270){
+                    myWorld.biR();
+                }
             }
-            
+            if(getX() > wr){
+                if(myWorld.rotation()>=270 && myWorld.rotation() <359){
+                    myWorld.biL();
+                }else if(myWorld.rotation()>=359||myWorld.rotation()>=0 && myWorld.rotation() <90){
+                    myWorld.biR();
+                }
+            }
+            if(getY() <= 20){
+                if(myWorld.rotation()>=180 && myWorld.rotation() <270){
+                    myWorld.biL();
+                }else if(myWorld.rotation()>=270||myWorld.rotation()>=0 && myWorld.rotation() <359){
+                    myWorld.biR();
+                }
+            }
+            if(getY()>hd){
+                if(myWorld.rotation()>=0 && myWorld.rotation() <90){
+                    myWorld.biL();
+                }else if(myWorld.rotation()>=90||myWorld.rotation()>=0 && myWorld.rotation() <180){
+                    myWorld.biR();
+                }
+            }
         }
     }
 

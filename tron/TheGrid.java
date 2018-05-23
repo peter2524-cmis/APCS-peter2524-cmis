@@ -25,6 +25,7 @@ public class TheGrid extends World
         this.x = x;
         cell.scale(10,10);
         setBackground(cell);
+        Greenfoot.setSpeed(47);
         if(x== 4){
             player2.turn(180);
             player3.turn(270);
@@ -145,6 +146,14 @@ public class TheGrid extends World
 
     public int bY(){
         return dude.getY();
+    }
+    
+    public int getW(){
+        return w;
+    }
+    
+    public int getH(){
+        return h;
     }
 
 }

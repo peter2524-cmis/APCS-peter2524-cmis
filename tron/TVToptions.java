@@ -24,9 +24,13 @@ public class TVToptions extends World
         Three three = new Three();
         Four four = new Four();
         addObject(one,40,40);
+        showText("A,S",40,80);
         addObject(two,200,40);
+        showText("Down,Right",200,80);
         addObject(three,w-200,40);
+        showText("C,V",w-200,80);
         addObject(four,w-40,40);
+        showText("N,M",w-40,80);
     }
 
     public boolean tester(){
