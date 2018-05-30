@@ -21,7 +21,7 @@ public class StartMenu extends World
         setBackground(cell);
         Buttons plane = new PVT();
         Buttons tron = new TVT();
-        addObject(plane,w/2,h/2+20);
+        //addObject(plane,w/2,h/2+20);
         addObject(tron,w/2,h/2-20);
     }
 

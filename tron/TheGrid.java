@@ -53,10 +53,13 @@ public class TheGrid extends World
         }
         if(x!=1){
             for(int r = 0; r<=w;r = r+10){
-                for(int c = 0; c<=h;c = c+10){
+                int c = 0;
+                while( c<=h){
+
                     if(r == 0||r == w || c == 0 || c== h){
                         addObject(new Invisilazer(),r,c);
                     }
+                    c++;
                 }
             }
         }else{
@@ -147,11 +150,11 @@ public class TheGrid extends World
     public int bY(){
         return dude.getY();
     }
-    
+
     public int getW(){
         return w;
     }
-    
+
     public int getH(){
         return h;
     }

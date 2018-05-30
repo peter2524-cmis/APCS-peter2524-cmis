@@ -25,5 +25,8 @@ public class plane extends Actor
         if (Greenfoot.isKeyDown("q")){
             
         }
+        int[] ted = new int[10];
+        for(int ted
+        
     }    
 }
